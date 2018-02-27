@@ -1,0 +1,102 @@
+
+/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "1Ne-D6-2RA"; */
+"1Ne-D6-2RA.placeholder" = "请输入密码";
+
+/* Class = "UILabel"; text = "账号登录"; ObjectID = "3hT-vj-2Xw"; */
+"3hT-vj-2Xw.text" = "账号登录";
+
+/* Class = "UILabel"; text = "账号"; ObjectID = "5RC-4r-Ii6"; */
+"5RC-4r-Ii6.text" = "账号";
+
+/* Class = "UILabel"; text = "账号"; ObjectID = "6SL-ay-LVG"; */
+"6SL-ay-LVG.text" = "账号";
+
+/* Class = "UILabel"; text = "版本更新"; ObjectID = "6bS-ZQ-skq"; */
+"6bS-ZQ-skq.text" = "版本更新";
+
+/* Class = "UILabel"; text = "中文简体"; ObjectID = "724-AY-n7D"; */
+"724-AY-n7D.text" = "中文简体";
+
+/* Class = "UILabel"; text = "代办事项"; ObjectID = "866-bb-gnl"; */
+"866-bb-gnl.text" = "代办事项";
+
+/* Class = "UILabel"; text = "修改密码"; ObjectID = "ABB-0G-cGO"; */
+"ABB-0G-cGO.text" = "修改密码";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DcG-GP-1gY"; */
+"DcG-GP-1gY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "密码"; ObjectID = "He4-nm-pA5"; */
+"He4-nm-pA5.text" = "密码";
+
+/* Class = "UILabel"; text = "江桥店"; ObjectID = "IpL-cO-fDC"; */
+"IpL-cO-fDC.text" = "江桥店";
+
+/* Class = "UILabel"; text = "账户信息"; ObjectID = "IsC-aH-Wsf"; */
+"IsC-aH-Wsf.text" = "账户信息";
+
+/* Class = "UILabel"; text = "账号  15985698956"; ObjectID = "KMt-yP-qTC"; */
+"KMt-yP-qTC.text" = "账号  15985698956";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "MXW-t9-eUF"; */
+"MXW-t9-eUF.normalTitle" = "登录";
+
+/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "OZH-v8-r6m"; */
+"OZH-v8-r6m.placeholder" = "请输入密码";
+
+/* Class = "UILabel"; text = "密码"; ObjectID = "ZJm-TJ-TIt"; */
+"ZJm-TJ-TIt.text" = "密码";
+
+/* Class = "UIViewController"; title = "登录"; ObjectID = "c9S-Mm-STO"; */
+"c9S-Mm-STO.title" = "登录";
+
+/* Class = "UILabel"; text = "错误"; ObjectID = "clI-d1-heV"; */
+"clI-d1-heV.text" = "错误";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cxn-VB-lwu"; */
+"cxn-VB-lwu.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cxv-Vt-bxe"; */
+"cxv-Vt-bxe.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "退出登录"; ObjectID = "dNt-Bd-iJx"; */
+"dNt-Bd-iJx.normalTitle" = "退出登录";
+
+/* Class = "UILabel"; text = "IP地址？"; ObjectID = "gd7-S8-kmi"; */
+"gd7-S8-kmi.text" = "IP地址？";
+
+/* Class = "UILabel"; text = "错误"; ObjectID = "jA3-XF-TCE"; */
+"jA3-XF-TCE.text" = "错误";
+
+/* Class = "UITabBarItem"; title = "修改密码"; ObjectID = "jmI-Y9-kBB"; */
+"jmI-Y9-kBB.title" = "修改密码";
+
+/* Class = "UILabel"; text = "去设置"; ObjectID = "jpM-rW-d2C"; */
+"jpM-rW-d2C.text" = "去设置";
+
+/* Class = "UITextField"; placeholder = "请输入账号"; ObjectID = "mrZ-z8-yC4"; */
+"mrZ-z8-yC4.placeholder" = "请输入账号";
+
+/* Class = "UILabel"; text = "门店"; ObjectID = "npx-rV-ERv"; */
+"npx-rV-ERv.text" = "门店";
+
+/* Class = "UILabel"; text = "去修改"; ObjectID = "oRE-Pq-gOU"; */
+"oRE-Pq-gOU.text" = "去修改";
+
+/* Class = "UILabel"; text = "账户中心"; ObjectID = "oY3-bK-WjM"; */
+"oY3-bK-WjM.text" = "账户中心";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "pmu-bf-oM0"; */
+"pmu-bf-oM0.normalTitle" = "登录";
+
+/* Class = "UILabel"; text = "欢迎使用手机登录"; ObjectID = "qSm-gh-3Zl"; */
+"qSm-gh-3Zl.text" = "欢迎使用手机登录";
+
+/* Class = "UITabBarItem"; title = "首页"; ObjectID = "sFZ-IG-Tl8"; */
+"sFZ-IG-Tl8.title" = "首页";
+
+/* Class = "UITextField"; placeholder = "请输入账号"; ObjectID = "tcc-LA-0As"; */
+"tcc-LA-0As.placeholder" = "请输入账号";
+
+/* Class = "UILabel"; text = "手机登录"; ObjectID = "uu3-xq-MMC"; */
+"uu3-xq-MMC.text" = "手机登录";

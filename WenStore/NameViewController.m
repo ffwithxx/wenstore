@@ -1,0 +1,93 @@
+//
+//  NameViewController.m
+//  WenStore
+//
+//  Created by 冯丽 on 17/9/7.
+//  Copyright © 2017年 chenghong. All rights reserved.
+//
+
+#import "NameViewController.h"
+#import "NameTableViewCell.h"
+#import "BGControl.h"
+#import "AppDelegate.h"
+#define  KCellName @"NameTableViewCell"
+
+@interface NameViewController ()<UITableViewDelegate,UITableViewDataSource> {
+ NameTableViewCell *_cell;
+}
+
+@end
+
+@implementation NameViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.dataArray = [NSMutableArray new];
+    self.dataArray = self.arr;
+    self.bigTableView.showsVerticalScrollIndicator = NO;
+    self.bigTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+}
+- (IBAction)buttonClick:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    _cell = [tableView dequeueReusableCellWithIdentifier:KCellName];
+    if (!_cell) {
+        _cell = [[NameTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KCellName];
+    }
+    CGRect cellFrame = _cell.contentView.frame;
+    cellFrame.size.width = kScreenSize.width;
+    [_cell.contentView setFrame:cellFrame];
+    NSString *nameStr = self.dataArray[indexPath.section];
+    [_cell showNameStr:nameStr];
+    return _cell;
+    
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+       return 50;
+    
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+    
+}
+-
+(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 15;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSString *nameStr = self.dataArray[indexPath.section];
+    if (_delegate &&[_delegate respondsToSelector:@selector(NameStr:)]) {
+        [_delegate NameStr:nameStr];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return self.dataArray.count;
+    
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

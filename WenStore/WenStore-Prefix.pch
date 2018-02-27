@@ -1,0 +1,29 @@
+//
+//  WenStore-Prefix.pch
+//  WenStore
+//
+//  Created by 冯丽 on 17/8/8.
+//  Copyright © 2017年 chenghong. All rights reserved.
+//
+
+#ifndef WenStore_Prefix_pch
+#define WenStore_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define kScreenSize [UIScreen mainScreen].bounds.size
+#pragma mark - 颜色
+
+#define kTabBarColor [UIColor colorWithRed:16/255.0 green:204/255.0 blue:110/255.0 alpha:1]
+#define kBackGroungColor [UIColor colorWithRed:235/255.0 green:239/255.0 blue:239/255.0 alpha:1]
+
+#define kTextGrayColor [UIColor colorWithRed:154/255.0 green:162/255.0 blue:161/255.0 alpha:1]
+#define kTextLighColor [UIColor colorWithRed:194/255.0 green:198/255.0 blue:195/255.0 alpha:1]
+
+
+#define kredColor [UIColor colorWithRed:246/255.0 green:95/255.0 blue:97/255.0 alpha:1]
+#define kBlackTextColor [UIColor colorWithRed:36/255.0 green:55/255.0 blue:59/255.0 alpha:1]
+
+#define kLineColor [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1]
+#define kBlueColor [UIColor colorWithRed:58/255.0 green:113/255.0 blue:247/255.0 alpha:1]
+#endif /* WenStore_Prefix_pch */

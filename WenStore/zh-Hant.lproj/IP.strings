@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "请输入IP地址"; ObjectID = "37A-1b-qgA"; */
+"37A-1b-qgA.placeholder" = "请输入IP地址";
+
+/* Class = "UILabel"; text = "IP设置"; ObjectID = "JCL-Mw-heM"; */
+"JCL-Mw-heM.text" = "IP设置";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "Vr1-j6-JE2"; */
+"Vr1-j6-JE2.normalTitle" = "确定";

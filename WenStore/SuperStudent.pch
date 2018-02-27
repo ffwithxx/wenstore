@@ -1,0 +1,27 @@
+//
+//  SuperStudent.pch
+//  SuperStudent
+//
+//  Created by chenghong_mac on 15/9/23.
+//  Copyright (c) 2015年 Bogo. All rights reserved.
+//
+
+#ifndef SuperStudent_SuperStudent_pch
+#define SuperStudent_SuperStudent_pch
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kScreenSize [UIScreen mainScreen].bounds.size
+#pragma mark - 颜色
+
+#define kTabBarColor [UIColor colorWithRed:137/255.0 green:173/255.0 blue:255/255.0 alpha:1]
+#define kBackGroungColor [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1]
+#define kDarkGrayColor [UIColor colorWithRed:189/255.0 green:189/255.0 blue:189/255.0 alpha:1]
+#define kTextGrayColor [UIColor colorWithRed:113/255.0 green:113/255.0 blue:113/255.0 alpha:1]
+#define kTextLighColor [UIColor colorWithRed:160/255.0 green:160/255.0 blue:160/255.0 alpha:1]
+#define kgreeColor [UIColor colorWithRed:56/255.0 green:159/255.0 blue:37/255.0 alpha:1]
+#define kWhiteColor [UIColor whiteColor]
+#define kClearColor [UIColor clearColor]
+#define kBlackColor [UIColor blackColor]
+
+#endif
