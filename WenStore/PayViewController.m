@@ -23,9 +23,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     paymentId = 12;
-     NSInteger lpdt043 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"lpdt043"] ] integerValue];
-    self.priceLab.text = [NSString stringWithFormat:@"%@%@",@"￥",[BGControl notRounding:self.sumPrice afterPoint:lpdt043]];
+    [self fist];
+    
     // Do any additional setup after loading the view.
+}
+- (void)fist {
+    [self show];
+    [[AFClient shareInstance] GetPaymentResrouce:self.k1mf100 progressBlock:^(NSProgress *progress) {
+        
+    } success:^(id responseBody) {
+        if ([[responseBody valueForKey:@"status"] intValue] == 200) {
+            NSDecimalNumber *payMent = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",[[responseBody valueForKey:@"data"]valueForKey:@"payment"]]];
+            NSInteger lpdt043 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"lpdt043"] ] integerValue];
+            self.priceLab.text = [NSString stringWithFormat:@"%@%@",@"￥",[BGControl notRounding:payMent afterPoint:lpdt043]];
+        }else {
+            NSString *errors = [responseBody valueForKey:@"errors"][0];
+            [self Alert:errors];
+        }
+        [self dismiss];
+    } failure:^(NSError *error) {
+         [self dismiss];
+    }];
+    
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     if (sender.tag == 201) {
@@ -65,6 +84,7 @@
     NSNumber *payNum = [NSNumber numberWithInt:paymentId];
     NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:payNum,@"paymentId",self.k1mf100,@"k1mf100", nil];
     [self show];
+    if(![self.priceLab.text isEqualToString:@"￥_ _"]){
     [[AFClient shareInstance] Masgetpay:@"App/Masgetpay/Pay" withDict:dict progressBlock:^(NSProgress *progress) {
         
     } success:^(id responseBody) {
@@ -78,9 +98,10 @@
         }
         [self dismiss];
     } failure:^(NSError *error) {
-        [self dismiss];
+       
          [self Alert:@"支付失败"];
     }];
+    }
 }
 - (void)Alert:(NSString *)AlertStr{
     [LYMessageToast toastWithText:AlertStr backgroundColor:[UIColor blackColor] font:[UIFont systemFontOfSize:15] fontColor:[UIColor whiteColor] duration:2.f inView:self.view];

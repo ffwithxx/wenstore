@@ -30,11 +30,13 @@
 @property (strong, nonatomic) IBOutlet UIButton *bianjiBth;
 @property (strong, nonatomic) IBOutlet UIView *fgview;
 @property (strong, nonatomic) IBOutlet UIView *orderNumView;
+@property (strong, nonatomic) IBOutlet UIView *sumView;
 @property (strong, nonatomic) IBOutlet UIButton *subMitBth;
 @property (strong, nonatomic) IBOutlet UIView *lastView;
 @property (strong, nonatomic) IBOutlet UILabel *priceLab;
 @property (strong, nonatomic) IBOutlet UIButton *deletBth;
 @property (strong, nonatomic) IBOutlet UIButton *oneMoreBth;
+@property (strong, nonatomic) IBOutlet UIView *yunView;
 
 @property (nonatomic,weak)id <orderDelegete> orderDelegate;
 

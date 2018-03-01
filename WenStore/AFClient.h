@@ -68,5 +68,6 @@ typedef void(^FailureBlcok)(NSError *error);
 - (void)Masgetpay:(NSString *)urlStr withDict:(NSDictionary *)dataDict  progressBlock:(ProgressBlock)progress success:(SuccessBlock)success failure:(FailureBlcok)failure;
 
 - (void)OrderableRemind:(NSString *)k1dt001Str withArr:(NSArray *)userResponsed  progressBlock:(ProgressBlock)progress success:(SuccessBlock)success failure:(FailureBlcok)failure;
-
+//付款
+- (void)GetPaymentResrouce:(NSString *)k1mf100 progressBlock:(ProgressBlock)progress success:(SuccessBlock)success failure:(FailureBlcok)failure;
 @end

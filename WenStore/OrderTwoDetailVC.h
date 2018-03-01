@@ -82,5 +82,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *sevenTimeLab;
 @property (strong, nonatomic) orderModel *orderModel;
 @property (strong, nonatomic) NSMutableDictionary *myDict;
-
+@property (assign, nonatomic) BOOL isji;
 @end

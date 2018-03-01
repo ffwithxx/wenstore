@@ -742,7 +742,7 @@ self.HeadImg.frame = CGRectMake(CGRectGetMaxX(BJView.frame)+5, 10, 60, 60);
     } failure:^(NSError *error) {
         [self Alert:@"上传附件失败"];
          [self creatImgScr];
-        //       [arr removeObjectAtIndex:index];
+ 
         [self dismiss];
     }];
     

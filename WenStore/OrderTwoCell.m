@@ -188,12 +188,15 @@
     NSArray *visiableFieldsArr = [[resourceDict valueForKey:@"data"] valueForKey:@"visiableFields"];
    
     BOOL isPrice = false;
+    BOOL isyunPrice = false;
     for (int i = 0; i < visiableFieldsArr.count; i++) {
         NSString *visiableFieldsStr = visiableFieldsArr[i];
         if ([visiableFieldsStr isEqualToString:@"K1MF302"]) {
             isPrice = true;
         }
-        
+        if ([visiableFieldsStr isEqualToString:@"K1MF301"]) {
+            isyunPrice = true;
+        }
     }
    
     if (!isPrice) {
@@ -201,8 +204,16 @@
     }else{
         self.priceLab.hidden = NO;
     }
-
-    
+    CGFloat chaHei = 0;
+    if (!isyunPrice) {
+        self.yunView.hidden = YES;
+        chaHei = 50;
+    }else{
+        self.yunView.hidden = NO;
+    }
+    self.orderNumView.frame = CGRectMake(0, 165-chaHei, kScreenSize.width, 50);
+    self.sumView.frame = CGRectMake(0, 215-chaHei, kScreenSize.width, 50);
+    self.lastView.frame = CGRectMake(0, 265-chaHei, kScreenSize.width, 50);
 }
 
 - (IBAction)buttonClick:(UIButton *)sender {

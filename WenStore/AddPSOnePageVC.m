@@ -34,6 +34,7 @@
     changePrice *changeView;
     NSMutableDictionary *postMastDict;
     orderCountThree *orderView;
+    NSString *psTypeStr;
 
 }
 @property (nonatomic, strong) NSMutableArray *datas;
@@ -104,8 +105,10 @@
     
     if ([self.typeStr isEqualToString:@"add"]) {
         urlStr = @"App/Wbp3023/New";
+        psTypeStr = @"add";
     }else {
         urlStr = @"App/Wbp3023/Edit";
+        psTypeStr = @"edit";
     }
     [[AFClient shareInstance] GetEdit:self.idStr withArr:postOneArr withUrl:urlStr progressBlock:^(NSProgress *progress) {
         
@@ -339,7 +342,11 @@
         [modelOne setValue:isSameUnit forKey:@"isSameUnit"];
         [modelOne setValue:model.k1dt201Price forKey:@"k1dt201"];
         [modelOne setValue:model.k1dt202 forKey:@"k1dt202"];
-        [detailArr addObject:modelOne];
+        NSComparisonResult res = [model.k1dt101Count compare:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",@"0"]]];
+        if (res == NSOrderedDescending) {
+            [detailArr addObject:modelOne];
+        }
+       
     }
     [self show];
     [[AFClient shareInstance] postValidateCart:[self.dataDict valueForKey:@"master"] withIdStr:self.idStr detail:detailArr uploadImages:uploadImgArr promoOrders:proOrderArr freeOrders:freeOrderArr withArr:postOneArr withUrl:@"App/Wbp3023/ValidateCart" progressBlock:^(NSProgress *progress) {
@@ -353,7 +360,7 @@
                 
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Wendian" bundle:nil];
                 PSDetailVC *detail = [storyboard instantiateViewControllerWithIdentifier:@"PSDetailVC"];
-                detail.typeStr = @"add";
+                detail.typeStr = psTypeStr;
                 detail.k1mf107 =[[self.dataDict valueForKey:@"master"] valueForKey:@"k1mf107"];
                 detail.k1mf101 =[[self.dataDict valueForKey:@"master"] valueForKey:@"k1mf101"];
                 detail.dataDict = [responseBody valueForKey:@"data"];

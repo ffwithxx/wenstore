@@ -126,7 +126,8 @@
                  }
              }
              NSDecimalNumber *numone = fanDec;
-             if (![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"有货"]) {
+             
+             if (![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"有货"]&&![BGControl isNULLOfString:[NSString stringWithFormat:@"%@",self.model.sys001Text]]) {
                  numone = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001Text]];
                  
              }
@@ -191,7 +192,7 @@
 
             if (![BGControl isNULLOfString:self.model.sys001Text]) {
                 NSDecimalNumber *num = [NSDecimalNumber decimalNumberWithString:@"0"];
-                if (![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"无货"]) {
+                if (![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"有货"]&&![BGControl isNULLOfString:[NSString stringWithFormat:@"%@",self.model.sys001Text]]) {
                     num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001Text]];
                     
                 }

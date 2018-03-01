@@ -617,10 +617,10 @@
     self.xiadanName.text = [masterDict valueForKey:@"k1mf996"];
     self.storeName.text = [masterDict valueForKey:@"k1mf011"];
     self.storeId.text = [masterDict valueForKey:@"k1mf001"];
-    NSString  *isji = [[masterDict valueForKey:@"k1mf006"] stringValue];
+//    NSString  *isji = [[masterDict valueForKey:@"k1mf006"] stringValue];
    
     
-    if ([isji isEqualToString:@"1"]) {
+    if (self.isji==true) {
         self.jiImgView.hidden = NO;
     }else {
         self.jiImgView.hidden = YES;

@@ -388,8 +388,11 @@
         [modelOne setValue:isSameUnit forKey:@"isSameUnit"];
         [modelOne setValue:model.k1dt011Unit forKey:@"k1dt011Unit"];
         [modelOne setValue:model.k1dt011UnitText forKey:@"k1dt011UnitText"];
-    
-        [detailArr addObject:modelOne];
+        NSComparisonResult res = [model.orderCount compare:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",@"0"]]];
+        if (res == NSOrderedDescending) {
+            [detailArr addObject:modelOne];
+        }
+      
     }
     [self show];
     [[AFClient shareInstance] postValidateCart:[self.dataDict valueForKey:@"master"] withIdStr:self.idStr detail:detailArr uploadImages:uploadImgArr promoOrders:proOrderArr freeOrders:freeOrderArr withArr:postOneArr withUrl:@"App/Wbp3004/ValidateCart" progressBlock:^(NSProgress *progress) {

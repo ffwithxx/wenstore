@@ -101,6 +101,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
+            
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -144,13 +145,15 @@
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
              [[NSUserDefaults standardUserDefaults] setValue:jsonString forKey:@"ResourceData"];
             NSLog(@"%@",dict);
-            //             获取所有数据报头信息
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                 [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
+          
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -207,8 +210,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-                    //                    [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
-                    //                    NSLog(@"%@",dict);
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                 }
                 
                 NSLog(@"%@",responseObject);
@@ -255,7 +259,9 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-            //            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -302,7 +308,9 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -339,7 +347,9 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -424,7 +434,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//                    [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
 //                    NSLog(@"%@",dict);
                 }
 
@@ -498,8 +510,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-                    //                    [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
-                    //                    NSLog(@"%@",dict);
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                 }
                 
                 NSLog(@"%@",responseObject);
@@ -560,6 +573,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:&error];
                     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
                     NSLog(@"%@",jsonString);                }
@@ -618,8 +634,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//                    [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
-                    //                    NSLog(@"%@",dict);
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                 }
                 
                 NSLog(@"%@",responseObject);
@@ -678,8 +695,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//                    [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
-                    //                    NSLog(@"%@",dict);
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                 }
                 
                 NSLog(@"%@",responseObject);
@@ -733,6 +751,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                     success(responseObject);
                     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:&error];
                     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
@@ -787,10 +808,10 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            if ([BGControl isNULLOfString:cookie]) {
+            if (![BGControl isNULLOfString:cookieString]) {
                 [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
 
-//            }
             NSError *error;
             NSString *jsonString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             NSLog(@"%@",jsonString);
@@ -876,13 +897,15 @@
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         
         if (success) {
-            //             获取所有数据报头信息
-//            NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
-//            NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
-//            NSLog(@"fields = %@", [fields description]);
-//            // 获取cookie方法1
-//            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+                        // 获取所有数据报头信息
+            NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
+            NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+            NSLog(@"fields = %@", [fields description]);
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -916,7 +939,9 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -955,7 +980,9 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-//            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -1001,6 +1028,14 @@
                     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:&error];
                     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
                     NSLog(@"%@",jsonString);
+                    NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)response;
+                    NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+                    NSLog(@"fields = %@", [fields description]);
+                    // 获取cookie方法1
+                    NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                 
                 }
                 
@@ -1040,6 +1075,7 @@
    [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
     [manager POST:_url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:[self resetSizeOfImageData:img maxSize:50] name:@"file" fileName:fileName mimeType:@"image/jpg"];
+        NSLog(@"123");
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {
             progress(uploadProgress);
@@ -1050,6 +1086,15 @@
             NSLog(@"%@",_url);
             NSLog(@"%@",dict[@"data"]);
             success(dict);
+            //             获取所有数据报头信息
+            NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
+            NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+            NSLog(@"fields = %@", [fields description]);
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
@@ -1087,7 +1132,7 @@
             NSLog(@"fields = %@", [fields description]);
             // 获取cookie方法1
             NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-            //            [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
             success(dict);
             NSError *error;
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
@@ -1143,7 +1188,9 @@
                     NSLog(@"fields = %@", [fields description]);
                     // 获取cookie方法1
                     NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
-                    //                    [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cookie"];
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                     //                    NSLog(@"%@",dict);
                 }
                 
@@ -1185,6 +1232,11 @@
             //             获取所有数据报头信息
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             NSLog(@"fields = %@", [fields description]);
             success(dict);
             NSError *error;
@@ -1236,6 +1288,15 @@
                     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:&error];
                     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
                     NSLog(@"%@",jsonString);
+                    //             获取所有数据报头信息
+                    NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)response;
+                    NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+                    NSLog(@"fields = %@", [fields description]);
+                    // 获取cookie方法1
+                    NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+                    if (![BGControl isNULLOfString:cookieString]) {
+                        [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+                    }
                     
                 }
                 
@@ -1266,6 +1327,12 @@
             //             获取所有数据报头信息
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+            NSLog(@"fields = %@", [fields description]);
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             NSLog(@"fields = %@", [fields description]);
             success(dict);
           
@@ -1301,6 +1368,11 @@
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
             NSLog(@"fields = %@", [fields description]);
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
             
             
@@ -1333,6 +1405,11 @@
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
             NSLog(@"fields = %@", [fields description]);
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
             
             
@@ -1366,6 +1443,10 @@
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
             NSLog(@"fields = %@", [fields description]);
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
             
             
@@ -1399,7 +1480,11 @@
             //             获取所有数据报头信息
             NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
             NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
-            NSLog(@"fields = %@", [fields description]);
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
             success(dict);
             NSError *error;
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
@@ -1414,5 +1499,45 @@
     }];
 
 }
-
+//付款
+- (void)GetPaymentResrouce:(NSString *)k1mf100 progressBlock:(ProgressBlock)progress success:(SuccessBlock)success failure:(FailureBlcok)failure {
+    _url = [NSString stringWithFormat:@"%@/%@",kIPurl,@"App/Wbp3001/GetPaymentResource"];
+    AFHTTPSessionManager *manager = [self creatManager];
+    NSString *cookie = [[NSUserDefaults standardUserDefaults] valueForKey:@"cook"];
+    NSString *token = [[NSUserDefaults standardUserDefaults]valueForKey:@"token"];
+    NSString *appcustid = [[NSUserDefaults standardUserDefaults]valueForKey:@"appcustid"];
+    [manager.requestSerializer setValue:token forHTTPHeaderField:@"apptoken"];
+    [manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
+    [manager.requestSerializer setValue:appcustid forHTTPHeaderField:@"appcustid"];
+    [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:k1mf100,@"k1mf100", nil];
+    [manager POST:_url parameters:dict progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            progress(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        
+        if (success) {
+            //             获取所有数据报头信息
+            NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)task.response;
+            NSDictionary *fields = [HTTPResponse allHeaderFields];// 原生NSURLConnection写法
+            // 获取cookie方法1
+            NSString *cookieString = [[HTTPResponse allHeaderFields] valueForKey:@"Set-Cookie"];
+            if (![BGControl isNULLOfString:cookieString]) {
+                [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
+            }
+            success(dict);
+            NSError *error;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            NSLog(@"%@",jsonString);
+            
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
 @end

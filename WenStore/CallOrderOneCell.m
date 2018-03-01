@@ -650,7 +650,8 @@
     
 
         NSDecimalNumber *num = self.numCount;
-        if (![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"有货"]) {
+    
+        if (![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"有货"]&&![BGControl isNULLOfString:oneModel.sys001Text]) {
             num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
             
         }
@@ -736,7 +737,7 @@
         NSArray *arrone = [arr[indexStr] valueForKey:@"prics"];
         for (int i = 0; i<arrone.count; i++) {
             //                NSString *str = [NSString stringWithFormat:@"%@",[arrone[i] valueForKey:@"pric002"]];
-            NSDecimalNumber *str = [NSDecimalNumber decimalNumberWithString:[arrone[i] valueForKey:@"pric002"]];
+            NSDecimalNumber *str = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",[arrone[i] valueForKey:@"pric002"]]];
             NSComparisonResult result = [self.numCount compare:str];
             if (i == 0) {
                 if (result == NSOrderedDescending) {

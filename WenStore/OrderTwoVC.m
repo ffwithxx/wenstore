@@ -32,6 +32,7 @@
     int CategoryOne;
     NSMutableArray *postOneArr;
     NSString *isEnablePayment;
+    CGFloat oneWidth;
 }
 
 @end
@@ -48,7 +49,24 @@
     self.bigTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.bigTableView.delegate = self;
     self.bigTableView.dataSource = self;
-   
+    oneWidth = kScreenSize.width/3;
+    if (![isEnablePayment isEqualToString:@"1"]) {
+        oneWidth = kScreenSize.width/2;
+        CGRect oneFrame = self.oneBth.frame;
+        oneFrame.size.width = oneWidth;
+        [self.oneBth setFrame:oneFrame];
+        
+        CGRect twoFrame = self.twoBth.frame;
+        twoFrame.size.width = oneWidth;
+        twoFrame.origin.x = CGRectGetMaxX(self.oneBth.frame);
+        [self.twoBth setFrame:twoFrame];
+        
+        CGRect lineFrame = self.lineView.frame;
+        lineFrame.size.width = oneWidth;
+        [self.lineView setFrame:lineFrame];
+        self.threeBth.hidden = YES;
+    }
+    
     // Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,7 +76,7 @@
     [self first];
 }
 - (void)first {
-
+    
     MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         pageIndex = 1;
         [self getDate];
@@ -82,39 +100,35 @@
 //}
 -(void)getDate {
     NSNumber *pageNumber = [NSNumber numberWithInt:pageIndex];
-     NSNumber *page = [NSNumber numberWithInt:50];
-     NSNumber *isYes = [NSNumber numberWithBool:k1mf006Yes];
-     NSNumber *isNo = [NSNumber numberWithBool:k1mf006No];
+    NSNumber *page = [NSNumber numberWithInt:50];
+    NSNumber *isYes = [NSNumber numberWithBool:k1mf006Yes];
+    NSNumber *isNo = [NSNumber numberWithBool:k1mf006No];
     [postDict setObject:pageNumber forKey:@"page"];
     [postDict setObject:page forKey:@"perPage"];
-     [postDict setObject:page forKey:@"perPage"];
+    [postDict setObject:page forKey:@"perPage"];
     NSNumber *categoryNum = [NSNumber numberWithInteger:CategoryOne];
     [postDict setObject:categoryNum forKey:@"Category"];
-   // [postDict setObject:isYes forKey:@"k1mf006Yes"];
+    // [postDict setObject:isYes forKey:@"k1mf006Yes"];
     //[postDict setObject:isNo forKey:@"k1mf006No"];
     [self show];
     [[AFClient shareInstance] OnePage:postDict withArr:postOneArr withUrl:@"App/Wbp3001/OnePage" progressBlock:^(NSProgress *progress) {
-        
     } success:^(id responseBody) {
         if (pageIndex == 1) {
             [self.dataArray removeAllObjects];
         }
-        
         if ([[responseBody valueForKey:@"status"] integerValue]== 200) {
             NSDictionary *userResponseDict = [[responseBody valueForKey:@"data"] valueForKey:@"userResponse"];
             if ([BGControl isNULLOfString:[userResponseDict valueForKey:@"code"]] ) {
                 
                 NSArray *dataArr = [[responseBody valueForKey:@"data"] valueForKey:@"data"];
-              
+                
                 for (int i = 0; i<dataArr.count; i++) {
                     NSDictionary *dict  = dataArr[i];
                     orderModel *model = [orderModel new];
                     [model setValuesForKeysWithDictionary:dict];
                     [self.dataArray addObject:model];
                 }
-
             }else {
-            
                 [self dismiss];
                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[userResponseDict valueForKey:@"title"] message:[userResponseDict valueForKey:@"message"] preferredStyle:UIAlertControllerStyleAlert ];
                 if ([[userResponseDict valueForKey:@"code"] intValue]== 1 ) {
@@ -154,18 +168,18 @@
             [self Alert:str];
             
         }
-       
+        
         if (self.dataArray.count <1) {
             self.bigTableView.hidden = YES;
             
         }else {
-        self.bigTableView.hidden = NO;
+            self.bigTableView.hidden = NO;
         }
-
-            [self.bigTableView reloadData];
-            [self.bigTableView.mj_header endRefreshing];
-            [self.bigTableView.mj_footer endRefreshing];
-            [self dismiss];
+        
+        [self.bigTableView reloadData];
+        [self.bigTableView.mj_header endRefreshing];
+        [self.bigTableView.mj_footer endRefreshing];
+        [self dismiss];
         
     } failure:^(NSError *error) {
         [self.bigTableView.mj_header endRefreshing];
@@ -176,26 +190,26 @@
 - (IBAction)buttonClick:(UIButton *)sender {
     
     CGRect lineFrame = self.lineView.frame;
-    CGFloat oneWidth = kScreenSize.width/3;
+    
     if (sender.tag == 201) {
         if ([self.fanStr isEqualToString:@"MainViewController"]) {
-                   [self.navigationController popViewControllerAnimated:YES];
+            [self.navigationController popViewControllerAnimated:YES];
         }else {
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             MainViewController *mainVC = [storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
             [self.navigationController pushViewController:mainVC animated:YES];
         }
-      
+        
     }else if (sender.tag == 202) {
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"Choice" owner:sender options:nil];
         choiceView = [nib firstObject];
-         self.blackButton.hidden = NO;
+        self.blackButton.hidden = NO;
         choiceView.delegate =self;
         [self.view addSubview:choiceView];
         choiceView.center = self.view.center;
         choiceView.clipsToBounds = YES;
         choiceView.layer.cornerRadius = 10.f;
-       
+        
         
         [self changeTwo:choiceView];
         
@@ -211,14 +225,14 @@
         lineFrame.origin.x = oneWidth;
         k1mf006Yes = 0;
         k1mf006No = 1;
-         pageIndex = 0;
+        pageIndex = 0;
         CategoryOne = 1;
         [self.lineView setFrame:lineFrame];
         [self first];
     }else if (sender.tag == 205){
         k1mf006Yes = 1;
         k1mf006No = 0;
-         pageIndex = 0;
+        pageIndex = 0;
         CategoryOne = 2;
         lineFrame.origin.x = oneWidth*2;
         [self.lineView setFrame:lineFrame];
@@ -228,9 +242,9 @@
 
 - (void)postChoiceStr:(NSString *)choiceStr {
     __block Choice *choiceVie = choiceView;
-     NSDate *tody = [NSDate date];
+    NSDate *tody = [NSDate date];
     if (![choiceStr isEqualToString:@"205"]) {
-         timeStr = choiceStr;
+        timeStr = choiceStr;
         if ([choiceStr isEqualToString:@"201"]) {
             NSDate *monthDate = [BGControl getPriousorLaterDateFromDate:tody withWeek:-1];
             [postDict setObject:[NSString stringWithFormat:@"%@",monthDate] forKey:@"k1mf003Begin"];
@@ -248,7 +262,7 @@
             [postDict setObject:[NSString stringWithFormat:@"%@",monthDate] forKey:@"k1mf003Begin"];
             [postDict setObject:[NSString stringWithFormat:@"%@",tody] forKey:@"k1mf003End"];
         }
-       
+        
     }
     [self first];
     self.blackButton.hidden = YES;
@@ -288,15 +302,15 @@
         test.threeBth.layer.borderColor = kTabBarColor.CGColor;
         test.threeBth.layer.borderWidth = 1.f;
         [test.oneBth setTitleColor:kTextGrayColor forState:UIControlStateNormal];
-         [test.twoBth setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-         [test.threeBth setTitleColor:kTextGrayColor forState:UIControlStateNormal];
-         [test.fourBth setTitleColor:kTextGrayColor forState:UIControlStateNormal];
+        [test.twoBth setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [test.threeBth setTitleColor:kTextGrayColor forState:UIControlStateNormal];
+        [test.fourBth setTitleColor:kTextGrayColor forState:UIControlStateNormal];
         test.fourBth.layer.cornerRadius = 15.f;
         test.fourBth.layer.borderColor = kTabBarColor.CGColor;
         test.fourBth.layer.borderWidth = 1.f;
-           test.twoBth.layer.cornerRadius = 15.f;
-     
-
+        test.twoBth.layer.cornerRadius = 15.f;
+        
+        
     }else if ([timeStr isEqualToString:@"203"]) {
         [test.threeBth setBackgroundColor:kTabBarColor];
         [test.oneBth setBackgroundColor:[UIColor whiteColor]];
@@ -315,7 +329,7 @@
         test.fourBth.layer.cornerRadius = 15.f;
         test.fourBth.layer.borderColor = kTabBarColor.CGColor;
         test.fourBth.layer.borderWidth = 1.f;
-           test.threeBth.layer.cornerRadius = 15.f;
+        test.threeBth.layer.cornerRadius = 15.f;
     }else if ([timeStr isEqualToString:@"204"]) {
         [test.fourBth setBackgroundColor:kTabBarColor];
         [test.oneBth setBackgroundColor:[UIColor whiteColor]];
@@ -336,7 +350,7 @@
         test.threeBth.layer.borderWidth = 1.f;
         test.fourBth.layer.cornerRadius = 15.f;
     }
-
+    
     
     
 }
@@ -370,41 +384,42 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     if ([idStr isEqualToString:@"301"]) {
         if (model.isNeedDeleteConfirmation == true) {
-          
+            
             OrderTwoDetailVC *orderVC = [storyboard instantiateViewControllerWithIdentifier:@"OrderTwoDetailVC"];
             orderVC.idStr = str;
             orderVC.myDict = self.dataDict;
             orderVC.orderModel = model;
+            orderVC.isji = model.k1mf109;
             orderVC.tag = [idStr integerValue];
             orderVC.billState = model.billState;
             orderVC.billStateStr = [NSString stringWithFormat:@"%d",model.billState];
             [self.navigationController pushViewController:orderVC animated:YES];
         }
-       
+        
     }else if ([idStr isEqualToString:@"303"]) {
         
         if (model.billState == 10 || model.billState == 30 || model.billState == 40) {
             if ([isEnablePayment isEqualToString:@"1"]) {
                 PayViewController *payVC = [storyboard instantiateViewControllerWithIdentifier:@"PayViewController"];
                 payVC.k1mf100 = model.k1mf100;
-                NSDecimalNumber *sumPrice = [model.k1mf302 decimalNumberByAdding:model.k1mf301];
-                payVC.sumPrice =sumPrice;
+               
                 [self.navigationController pushViewController:payVC animated:YES];
             }else {
                 [self Alert:@"不支持线上支付！"];
             }
             
         }else{
-          // [self tiaoWithStr:model.k1mf100];
+            // [self tiaoWithStr:model.k1mf100];
             OrderTwoDetailVC *orderVC = [storyboard instantiateViewControllerWithIdentifier:@"OrderTwoDetailVC"];
             orderVC.idStr = str;
             orderVC.myDict = self.dataDict;
             orderVC.orderModel = model;
+            orderVC.isji = model.k1mf109;
             orderVC.tag = [idStr integerValue];
             orderVC.billState = model.billState;
             orderVC.billStateStr = [NSString stringWithFormat:@"%d",model.billState];
             [self.navigationController pushViewController:orderVC animated:YES];
-
+            
         }
         
     }else if ([idStr isEqualToString:@"302"]) {
@@ -413,6 +428,7 @@
         orderVC.idStr = str;
         orderVC.myDict = self.dataDict;
         orderVC.orderModel = model;
+        orderVC.isji = model.k1mf109;
         orderVC.tag = [idStr integerValue];
         orderVC.billState = model.billState;
         orderVC.billStateStr = [NSString stringWithFormat:@"%d",model.billState];
@@ -429,6 +445,7 @@
             }else{
                 OrderTwoDetailVC *orderVC = [storyboard instantiateViewControllerWithIdentifier:@"OrderTwoDetailVC"];
                 orderVC.idStr = str;
+                orderVC.isji = model.k1mf109;
                 orderVC.myDict = self.dataDict;
                 orderVC.orderModel = model;
                 orderVC.billState = model.billState;
@@ -436,28 +453,29 @@
                 orderVC.billStateStr = [NSString stringWithFormat:@"%d",model.billState];
                 [self.navigationController pushViewController:orderVC animated:YES];
             }
-          
+            
         }else if(model.billState == 60|| model.billState == 30||model.billState == 90) {
             
             OrderTwoDetailVC *orderVC = [storyboard instantiateViewControllerWithIdentifier:@"OrderTwoDetailVC"];
             orderVC.idStr = str;
             orderVC.myDict = self.dataDict;
             orderVC.orderModel = model;
+            orderVC.isji = model.k1mf109;
             orderVC.billState = model.billState;
             orderVC.tag = [idStr integerValue];
             orderVC.billStateStr = [NSString stringWithFormat:@"%d",model.billState];
             [self.navigationController pushViewController:orderVC animated:YES];
-
+            
         }
-
+        
     }else if ([idStr isEqualToString:@"305"]) {
         
-         CallOrderOneVC *editVC = [storyboard instantiateViewControllerWithIdentifier:@"CallOrderOneVC"];
-         editVC.K1mf100 = model.k1mf100;
+        CallOrderOneVC *editVC = [storyboard instantiateViewControllerWithIdentifier:@"CallOrderOneVC"];
+        editVC.K1mf100 = model.k1mf100;
         [self.navigationController pushViewController:editVC animated:YES];
         
     }
-
+    
 }
 
 - (void)tiaoWithStr:(NSString *)idStr{
@@ -535,7 +553,7 @@
         
     } success:^(id responseBody) {
         if ([responseBody[@"status"] integerValue] == 200) {
-             NSDictionary *userResponseDict = [[responseBody valueForKey:@"data"] valueForKey:@"userResponse"];
+            NSDictionary *userResponseDict = [[responseBody valueForKey:@"data"] valueForKey:@"userResponse"];
             if ([BGControl isNULLOfString:[userResponseDict valueForKey:@"code"]] ) {
                 [self Alert:@"删除成功"];
                 [self first];
@@ -578,30 +596,43 @@
             [self Alert:str];
             [self.navigationController popViewControllerAnimated:YES];
             [self dismiss];
-
+            
         }
     } failure:^(NSError *error) {
         [self Alert:@"删除失败!"];
-         [self dismiss];
+        [self dismiss];
     }];
     
-
+    
 }
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 //    return self.topview;
 //}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-     orderModel *model = self.dataArray[indexPath.section];
+    orderModel *model = self.dataArray[indexPath.section];
+    NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"ResourceData"];
+    NSDictionary *resourceDict = [BGControl dictionaryWithJsonString:jsonString];
+    NSArray *visiableFieldsArr = [[resourceDict valueForKey:@"data"] valueForKey:@"visiableFields"];
+    BOOL isyunPrice = false;
+    CGFloat chaHei = 0;
+    for (int i = 0; i < visiableFieldsArr.count; i++) {
+        NSString *visiableFieldsStr = visiableFieldsArr[i];
+        if ([visiableFieldsStr isEqualToString:@"K1MF301"]) {
+            isyunPrice = true;
+        }else {
+            chaHei = 50;
+        }
+    }
     if (model.isDisplayEditButton || model.isDisplayDeleteButton || model.isDisplayCommitButton || model.isDisplayPayBillButton) {
-        return 315;
+        return 315 - chaHei;
     }else{
         if (model.billState == 0) {
-             return 265;
+            return 265- chaHei;
         }else{
-            return 315;
+            return 315- chaHei;
         }
-       
+        
     }
     
     
@@ -631,13 +662,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
