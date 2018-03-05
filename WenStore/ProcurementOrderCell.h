@@ -66,6 +66,6 @@
 @property (weak,nonatomic) id<procurementdelegate > procurementDelegate;
 @property (weak,nonatomic) id<inputdelegate > inputDelegate;
 @property (weak,nonatomic) id<changedelegate > changeDelegate;
-- (void)showModelWith:(AddProcurementModel *)model;
+- (void)showModelWith:(AddProcurementModel *)model withXian:(NSString *)xianStr;
 
 @end

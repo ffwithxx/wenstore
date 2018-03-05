@@ -609,7 +609,7 @@
     [manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
     [manager.requestSerializer setValue:appcustid forHTTPHeaderField:@"appcustid"];
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
-     NSDictionary  *hear = [NSDictionary dictionaryWithObjectsAndKeys:token,@"apptoken",cookie,@"Cookie",appcustid,@"appcustid", nil];
+     NSDictionary  *hear = [NSDictionary dictionaryWithObjectsAndKeys:token,@"apptoken",cookie,@"Cookie",appcustid,@"appcustid",@"1",@"newapp", nil];
     NSError *error;
     [dict setObject:userResponsed forKey:@"userResponsed"];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
@@ -1315,6 +1315,12 @@
 - (void)CheckHostStatuswithUrl:(NSString *)urlStr  progressBlock:(ProgressBlock)progress success:(SuccessBlock)success failure:(FailureBlcok)failure {
    
     AFHTTPSessionManager *manager = [self creatManager];
+    NSString *cookie = [[NSUserDefaults standardUserDefaults] valueForKey:@"cook"];
+    NSString *token = [[NSUserDefaults standardUserDefaults]valueForKey:@"token"];
+    NSString *appcustid = [[NSUserDefaults standardUserDefaults]valueForKey:@"appcustid"];
+    [manager.requestSerializer setValue:token forHTTPHeaderField:@"apptoken"];
+    [manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
+    [manager.requestSerializer setValue:appcustid forHTTPHeaderField:@"appcustid"];
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
     [manager POST:urlStr parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {

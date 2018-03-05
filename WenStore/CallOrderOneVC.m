@@ -351,20 +351,27 @@
     if (sender.tag == 204) {
         [self jiaoyan];
     }else if (sender.tag == 202) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"Forecast" owner:self options:nil];
-        
-        self.blackButton.hidden = NO;
-        forecastView = [nib firstObject];
-        forecastView.clipsToBounds = YES;
-        forecastView.layer.cornerRadius = 5.f;
-        
-        forecastView.delegate = self;
-        CGRect forecasFrame = forecastView.frame;
-        forecasFrame.size.width = kScreenSize.width - 40;
-        
-        [forecastView setFrame:forecasFrame];
-        forecastView.center = self.view.center;
-        [self.view addSubview:forecastView];
+        NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"ResourceData"];
+        NSDictionary *resourceDict = [BGControl dictionaryWithJsonString:jsonString];
+        if ([[[resourceDict valueForKey:@"data"]valueForKey:@"isSalesForecastByUser"] integerValue] == 1) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"Forecast" owner:self options:nil];
+            
+            self.blackButton.hidden = NO;
+            forecastView = [nib firstObject];
+            forecastView.clipsToBounds = YES;
+            forecastView.layer.cornerRadius = 5.f;
+            
+            forecastView.delegate = self;
+            CGRect forecasFrame = forecastView.frame;
+            forecasFrame.size.width = kScreenSize.width - 40;
+            
+            [forecastView setFrame:forecasFrame];
+            forecastView.center = self.view.center;
+            [self.view addSubview:forecastView];
+        }else{
+            [self yuce];
+        }
+       
     }else if (sender.tag == 203){
         if (!istrue && postArr.count>0) {
             self.blackButton.hidden = NO;
@@ -679,12 +686,16 @@
     [self show];
     NSDate *date = [NSDate date];
     [forecastDICT setObject:date forKey:@"k1mf003"];
+    NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"ResourceData"];
+    NSDictionary *resourceDict = [BGControl dictionaryWithJsonString:jsonString];
+    if ([[[resourceDict valueForKey:@"data"]valueForKey:@"isSalesForecastByUser"] integerValue] == 1)  {
     if ([forecasType isEqualToString:@"1"]) {
         [forecastDICT setObject:forecastView.ciFile.text forKey:@"forecastCount"];
     }else if ([forecasType isEqualToString:@"2"]){
         [forecastDICT setObject:forecastView.ciFile.text forKey:@"forecastCount"];
     }else if ([forecasType isEqualToString:@"3"]){
         [forecastDICT setObject:forecastView.ciFile.text forKey:@"forecastCount"];
+    }
     }
     [[AFClient shareInstance] SalesForecastWith:forecastDICT withArr:postOneArr progressBlock:^(NSProgress *progress) {
         
@@ -1477,6 +1488,7 @@
             self.forecastLab.hidden = YES;
         }
     }
+    
     NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"ResourceData"];
     NSDictionary *resourceDict = [BGControl dictionaryWithJsonString:jsonString];
     NSArray *visiableFieldsArr = [[resourceDict valueForKey:@"data"] valueForKey:@"visiableFields"];

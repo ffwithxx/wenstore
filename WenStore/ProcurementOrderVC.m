@@ -594,7 +594,7 @@
         return 1;
     }else if (tableView == self.rightTableView){
         
-        return self.datas.count;
+        return self.datas.count+1;
     }else {
         return 1;
     }
@@ -602,11 +602,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (tableView == self.leftTableView){
-        return self.datas.count;
+        return self.datas.count +1;
     }else if (tableView == self.rightTableView){
         
-        NSArray *arr = [aLLdataDict valueForKey:[NSString stringWithFormat:@"%ld",section]];
+        
+        if (section == self.datas.count) {
+            return 2;
+        }else{
+            NSArray *arr = [aLLdataDict valueForKey:[NSString stringWithFormat:@"%ld",section]];
         return arr.count;
+        }
     }
     
     return postArr.count;
@@ -632,8 +637,12 @@
         if (!cell)
             
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        
+        if (indexPath.row == self.datas.count) {
+            cell.textLabel.text = @"";
+        }else{
         cell.textLabel.text = self.datas[indexPath.row];
+        }
+        
         cell.textLabel.textColor = kTextGrayColor;
         cell.textLabel.highlightedTextColor = kTabBarColor;
         cell.textLabel.font = [UIFont systemFontOfSize:15];
@@ -642,8 +651,10 @@
         cell.backgroundView.backgroundColor = kBackGroungColor;
         cell.selectedBackgroundView=[[UIView alloc]initWithFrame:cell.frame];
         cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
-        
         cell.textLabel.numberOfLines = 0;
+        if (indexPath.row == self.datas.count && indexPath.row!=0) {
+            cell.userInteractionEnabled = NO;
+        }
         return cell;
     }
     else if (tableView == self.rightTableView) {
@@ -667,13 +678,14 @@
         _twoCell.inputDelegate = self;
         _twoCell.changeDelegate = self;
         NSArray *arr = [aLLdataDict valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
-            AddProcurementModel *model = arr[indexPath.row];
-        //
-        //        [_twoCell showModel:model withDict:self.dict widtRight:rightDict withKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section] withIndex:indexPath.row];
-        //        _twoCell.delegate = self;
-        //        _twoCell.orderDelegate = self;
-        //        _twoCell.TanDelegate = self;
-        [_twoCell showModelWith:model];
+        AddProcurementModel *model = arr[indexPath.row];
+        AddProcurementModel *modeOne = [AddProcurementModel new];
+        if (indexPath.section == self.datas.count) {
+              [_twoCell showModelWith:modeOne withXian:@"xian"];
+            _twoCell.backgroundColor = kBackGroungColor;
+        }else{
+        [_twoCell showModelWith:model withXian:@""];
+        }
         return _twoCell;
         
     }else {
@@ -707,6 +719,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }else if(tableView == self.leftTableView) {
+        if (indexPath.row == self.datas.count) {
+            return;
+        }
         // 点击左边的tableView，设置选中右边的tableView某一行。左边的tableView的每一行对应右边tableView的每个分区
         [self.rightTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] animated:YES scrollPosition:UITableViewScrollPositionTop];
         UITableViewCell * cell = [self.rightTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row]];

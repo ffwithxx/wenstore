@@ -177,8 +177,6 @@
 -(void)plusclicks{
     NSDecimalNumber*jiafa1 = [NSDecimalNumber decimalNumberWithString:@"1"];
     NSDecimalNumber*jiafa = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.numCount]] decimalNumberByAdding:jiafa1];
-    
-    //    self.numCount =[NSDecimalNumber decimalNumberWithString: [BGControl notRounding:jiafa afterPoint:lpdt036]];
     NSString *numStr = [BGControl notRounding:jiafa afterPoint:lpdt036];
     if (_orderDelegate &&[_orderDelegate respondsToSelector:@selector(getOrderCount:withModel:)]) {
         [_orderDelegate getOrderCount:[NSDecimalNumber decimalNumberWithString:numStr] withModel:oneModel];

@@ -135,7 +135,15 @@ AddProcurementModel *oneModel;
     
 }
 
-- (void)showModelWith:(AddProcurementModel *)model {
+- (void)showModelWith:(AddProcurementModel *)model withXian:(NSString *)xianStr{
+    if ([xianStr isEqualToString:@"xian"]) {
+//        UIView *view = [[UIView alloc] init];
+//        view.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.frame), CGRectGetHeight(self.contentView.frame));
+//        view.backgroundColor = kBackGroungColor;
+//        [self.contentView addSubview:view];
+    }else{
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        
     oneModel = model;
     lpdt036 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"3022lpdt036"] ] integerValue];
     lpdt042 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"3022lpdt042"] ] integerValue];
@@ -254,7 +262,7 @@ AddProcurementModel *oneModel;
         self.priceLab.hidden = NO;
         self.changePriceBth.hidden = NO;
     }
-    
+    }
     
 }
 
