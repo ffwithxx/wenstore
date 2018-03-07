@@ -196,6 +196,7 @@
     NSMutableDictionary *masterDict = [self.dataDict valueForKey:@"master"];
     NSMutableDictionary *postMast = [[NSMutableDictionary alloc] init];
     [postMast setValue:[masterDict valueForKey:@"k1mf000"] forKey:@"k1mf000"];
+    [postMast setValue:[masterDict valueForKey:@"k1mf102"] forKey:@"k1mf102"];
     [postMast setValue:[masterDict valueForKey:@"k1mf001"] forKey:@"k1mf001"];
     [postMast setValue:[NSString stringWithFormat:@"%@",self.caigouDate.text] forKey:@"k1mf003"];
 

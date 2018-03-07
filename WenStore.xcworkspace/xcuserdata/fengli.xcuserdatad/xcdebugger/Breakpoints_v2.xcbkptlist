@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/OrderDetailVC.m"
-            timestampString = "541906422.592067"
+            timestampString = "541933991.856884"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1337"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/OrderDetailVC.m"
-            timestampString = "541906422.592435"
+            timestampString = "541933991.856972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1329"
@@ -212,7 +212,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AFClient.m"
-            timestampString = "541921779.9682209"
+            timestampString = "541999010.8297991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "590"
@@ -228,7 +228,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/ProcurementOrderCell.m"
-            timestampString = "541677715.5230221"
+            timestampString = "542014682.73225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
@@ -400,7 +400,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.968919"
+            timestampString = "541933991.857722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1076"
@@ -636,7 +636,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.497986"
+            timestampString = "541992765.213903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
@@ -652,7 +652,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.4983619"
+            timestampString = "541992765.214213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
@@ -668,7 +668,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.498607"
+            timestampString = "541992765.214421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "516"
@@ -748,7 +748,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderThreeDetailVC.m"
-            timestampString = "541424395.8031009"
+            timestampString = "541994631.832182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
@@ -764,7 +764,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderThreeDetailVC.m"
-            timestampString = "541424395.803147"
+            timestampString = "541994631.832494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
@@ -796,7 +796,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.498969"
+            timestampString = "541992765.21473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
@@ -812,7 +812,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.4992"
+            timestampString = "541992765.214999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "171"
@@ -828,7 +828,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.4994349"
+            timestampString = "541992765.215206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "174"
@@ -844,7 +844,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AddPurchaseVC.m"
-            timestampString = "541589545.499728"
+            timestampString = "541992765.215407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
@@ -860,7 +860,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/OrderDetailVC.m"
-            timestampString = "541906422.593506"
+            timestampString = "541933991.8589261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1272"
@@ -924,12 +924,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/ThreeDetailVC.m"
-                  timestampString = "541921780.2097059"
+                  timestampString = "542080322.779356"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "737"
                   endingLineNumber = "737"
-                  offsetFromSymbolStart = "732">
+                  offsetFromSymbolStart = "630">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -939,12 +939,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/ThreeDetailVC.m"
-                  timestampString = "541921780.211586"
+                  timestampString = "542080322.782954"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "739"
                   endingLineNumber = "739"
-                  offsetFromSymbolStart = "56">
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1100,23 +1100,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.969802"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2178"
-            endingLineNumber = "2178"
-            landmarkName = "-getOrderCount:withKey:withIndex:withPrice:withStr:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.970153"
+            timestampString = "541933991.859254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2004"
@@ -1132,7 +1116,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.970439"
+            timestampString = "541933991.859677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1068"
@@ -1192,11 +1176,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AFClient.m"
-            timestampString = "541921779.9707479"
+            timestampString = "541999010.8306791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "841"
@@ -1276,7 +1260,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.9710521"
+            timestampString = "541933991.860199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1482"
@@ -1292,7 +1276,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.971311"
+            timestampString = "541933991.860459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1484"
@@ -1308,7 +1292,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.971557"
+            timestampString = "541933991.860736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1485"
@@ -1324,7 +1308,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/OrderDetailVC.m"
-            timestampString = "541906422.595396"
+            timestampString = "541933991.86114"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "982"
@@ -1340,12 +1324,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/OrderDetailVC.m"
-                  timestampString = "541921780.232446"
+                  timestampString = "542080322.833663"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "982"
                   endingLineNumber = "982"
-                  offsetFromSymbolStart = "4708">
+                  offsetFromSymbolStart = "4837">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1355,12 +1339,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/OrderDetailVC.m"
-                  timestampString = "541921780.233897"
+                  timestampString = "542080322.837919"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "984"
                   endingLineNumber = "984"
-                  offsetFromSymbolStart = "56">
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1372,7 +1356,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/OrderDetailVC.m"
-            timestampString = "541906422.595608"
+            timestampString = "541933991.861203"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "779"
@@ -1388,12 +1372,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/OrderDetailVC.m"
-                  timestampString = "541921780.237635"
+                  timestampString = "542080322.846308"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "779"
                   endingLineNumber = "779"
-                  offsetFromSymbolStart = "4996">
+                  offsetFromSymbolStart = "5072">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1403,30 +1387,14 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/OrderDetailVC.m"
-                  timestampString = "541921780.2391011"
+                  timestampString = "542080322.850557"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "781"
                   endingLineNumber = "781"
-                  offsetFromSymbolStart = "56">
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WenStore/ProcurementOrderDetailVC.m"
-            timestampString = "541424395.804973"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "-Progress"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1480,11 +1448,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AFClient.m"
-            timestampString = "541921779.97193"
+            timestampString = "541999010.8308949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "685"
@@ -1493,34 +1461,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[AFClient Update:withArr:withUrl:progressBlock:success:failure:]"
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wendian/WenStore/AFClient.m"
-                  timestampString = "541409162.826825"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
+                  timestampString = "542080322.857959"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "668"
-                  endingLineNumber = "668"
-                  offsetFromSymbolStart = "2272">
+                  startingLineNumber = "685"
+                  endingLineNumber = "685"
+                  offsetFromSymbolStart = "2326">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__65-[AFClient Update:withArr:withUrl:progressBlock:success:failure:]_block_invoke"
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wendian/WenStore/AFClient.m"
-                  timestampString = "541409162.82842"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
+                  timestampString = "542080322.860775"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "670"
-                  endingLineNumber = "670"
-                  offsetFromSymbolStart = "104">
+                  startingLineNumber = "687"
+                  endingLineNumber = "687"
+                  offsetFromSymbolStart = "103">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1771,22 +1739,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WenStore/AFClient.m"
-            timestampString = "541921779.972393"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1101"
-            endingLineNumber = "1101"
-            landmarkName = "-postFile:withArr:progressBlock:success:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneCell.m"
             timestampString = "541589545.501827"
             startingColumnNumber = "9223372036854775807"
@@ -1916,7 +1868,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AFClient.m"
-            timestampString = "541921779.972744"
+            timestampString = "541999010.831303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1520"
@@ -1960,107 +1912,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WenStore/PSDetailVC.m"
-            timestampString = "541587364.575052"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "-update"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PSDetailVC update]"
-                  moduleName = "WenStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/PSDetailVC.m"
-                  timestampString = "541921780.307001"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "4148">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__20-[PSDetailVC update]_block_invoke"
-                  moduleName = "WenStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/PSDetailVC.m"
-                  timestampString = "541921780.308531"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "262"
-                  endingLineNumber = "262"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WenStore/AFClient.m"
-            timestampString = "541921779.973"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "624"
-            endingLineNumber = "624"
-            landmarkName = "-Create:withArr:withUrl:progressBlock:success:failure:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AFClient Create:withArr:withUrl:progressBlock:success:failure:]"
-                  moduleName = "WenStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
-                  timestampString = "541921780.313018"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "624"
-                  endingLineNumber = "624"
-                  offsetFromSymbolStart = "2284">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[AFClient Create:withArr:withUrl:progressBlock:success:failure:]_block_invoke"
-                  moduleName = "WenStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
-                  timestampString = "541921780.31457"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "626"
-                  endingLineNumber = "626"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.973242"
+            timestampString = "541933991.862078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1317"
@@ -2076,7 +1932,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.973557"
+            timestampString = "541933991.862391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1303"
@@ -2092,12 +1948,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/CallOrderOneVC.m"
-                  timestampString = "541921780.318403"
+                  timestampString = "542080323.066684"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1303"
                   endingLineNumber = "1303"
-                  offsetFromSymbolStart = "11616">
+                  offsetFromSymbolStart = "11910">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2107,12 +1963,12 @@
                   moduleName = "WenStore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/CallOrderOneVC.m"
-                  timestampString = "541921780.3200001"
+                  timestampString = "542080323.072767"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1303"
                   endingLineNumber = "1303"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2124,7 +1980,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.973837"
+            timestampString = "541933991.862645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1494"
@@ -2140,7 +1996,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.974144"
+            timestampString = "541933991.862898"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "356"
@@ -2156,7 +2012,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.97443"
+            timestampString = "541933991.863166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "357"
@@ -2172,7 +2028,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/CallOrderOneVC.m"
-            timestampString = "541921779.974714"
+            timestampString = "541933991.863416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "372"
@@ -2264,16 +2120,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WenStore/AFClient.m"
+            timestampString = "541999010.8315949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "760"
+            endingLineNumber = "760"
+            landmarkName = "-OnePage:withArr:withUrl:progressBlock:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WenStore/AFClient.m"
+            timestampString = "541999140.117615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "796"
+            endingLineNumber = "796"
+            landmarkName = "-LoginByCustId:withUrl:withAccount:withPassword:withStoreId:isShow:withArr:progressBlock:success:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AFClient LoginByCustId:withUrl:withAccount:withPassword:withStoreId:isShow:withArr:progressBlock:success:failure:]"
+                  moduleName = "WenStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
+                  timestampString = "541999140.125034"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "796"
+                  endingLineNumber = "796"
+                  offsetFromSymbolStart = "1520">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__116-[AFClient LoginByCustId:withUrl:withAccount:withPassword:withStoreId:isShow:withArr:progressBlock:success:failure:]_block_invoke"
+                  moduleName = "WenStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
+                  timestampString = "541999140.127252"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "796"
+                  endingLineNumber = "796"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WenStore/AFClient.m"
-            timestampString = "541923619.742458"
+            timestampString = "542000544.631304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
-            landmarkName = "-GetEdit:withArr:withUrl:progressBlock:success:failure:"
+            startingLineNumber = "495"
+            endingLineNumber = "495"
+            landmarkName = "-postValidateCart:withIdStr:detail:uploadImages:promoOrders:freeOrders:withArr:withUrl:progressBlock:success:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AFClient postValidateCart:withIdStr:detail:uploadImages:promoOrders:freeOrders:withArr:withUrl:progressBlock:success:failure:]"
+                  moduleName = "WenStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
+                  timestampString = "542080323.080951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "495"
+                  endingLineNumber = "495"
+                  offsetFromSymbolStart = "3614">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__128-[AFClient postValidateCart:withIdStr:detail:uploadImages:promoOrders:freeOrders:withArr:withUrl:progressBlock:success:failure:]_block_invoke"
+                  moduleName = "WenStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/AFClient.m"
+                  timestampString = "542080323.0841399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "497"
+                  endingLineNumber = "497"
+                  offsetFromSymbolStart = "103">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WenStore/AFClient.m"
+            timestampString = "542000599.769412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "506"
+            endingLineNumber = "506"
+            landmarkName = "-postValidateCart:withIdStr:detail:uploadImages:promoOrders:freeOrders:withArr:withUrl:progressBlock:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2283,13 +2251,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WenStore/MainViewController.m"
-            timestampString = "541923833.582845"
+            filePath = "WenStore/PSDetailVC.m"
+            timestampString = "542022922.694996"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "-setDataWithUrl:"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "-update"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PSDetailVC update]"
+                  moduleName = "WenStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/PSDetailVC.m"
+                  timestampString = "542080323.103631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "3745">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__20-[PSDetailVC update]_block_invoke"
+                  moduleName = "WenStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fengli/Desktop/%E6%96%87%E5%85%B8/wenstore/WenStore/PSDetailVC.m"
+                  timestampString = "542080323.1090111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WenStore/AFClient.m"
+            timestampString = "542000838.553167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "691"
+            endingLineNumber = "691"
+            landmarkName = "-Update:withArr:withUrl:progressBlock:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

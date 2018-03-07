@@ -97,7 +97,7 @@
         self.threeTimeLab.text = dateArr[1];
     }
     NSDictionary *otherBillStateDict = _orderModel.otherBillState;
-    NSString *fourDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"40" ]];
+    NSString *fourDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"s40" ]];
     
     
     if ([BGControl isNULLOfString:fourDateStr]) {

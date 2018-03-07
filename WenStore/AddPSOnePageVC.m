@@ -254,8 +254,6 @@
 
 
 - (IBAction)buttonClick:(UIButton *)sender {
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     if (sender.tag == 201) {
         if (isSerch == true) {
             
@@ -342,6 +340,8 @@
         [modelOne setValue:isSameUnit forKey:@"isSameUnit"];
         [modelOne setValue:model.k1dt201Price forKey:@"k1dt201"];
         [modelOne setValue:model.k1dt202 forKey:@"k1dt202"];
+        [modelOne setValue:model.k1dt601 forKey:@"k1dt601"];
+        [modelOne setValue:model.k1dt800 forKey:@"k1dt800"];
         NSComparisonResult res = [model.k1dt101Count compare:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",@"0"]]];
         if (res == NSOrderedDescending) {
             [detailArr addObject:modelOne];

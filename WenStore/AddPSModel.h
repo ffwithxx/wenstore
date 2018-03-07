@@ -43,4 +43,7 @@
 @property(nonatomic)NSInteger  index;
 @property (nonatomic)NSString *keyOneStr;
 @property(nonatomic)NSInteger indexOne;
+
+@property (nonatomic)NSString *k1dt601;//
+@property (nonatomic)NSString *k1dt800;//
 @end

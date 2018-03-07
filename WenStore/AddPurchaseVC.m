@@ -253,9 +253,6 @@
  203 提交
  */
 - (IBAction)buttonClick:(UIButton *)sender {
-   
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
     if (sender.tag == 201) {
         if (isSerch == true) {
             
@@ -556,10 +553,7 @@
         AddPurchaseCell  * _twoCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (!_twoCell) {
             _twoCell = [[AddPurchaseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-            
-            
         }
-        
         CGRect cellFrame = _twoCell.contentView.frame;
         cellFrame.size.width = kScreenSize.width-100;
         [_twoCell.contentView setFrame:cellFrame];

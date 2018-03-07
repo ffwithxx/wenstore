@@ -151,9 +151,9 @@
         self.threeTimeLab.text = dateArr[1];
     }
     NSDictionary *otherBillStateDict = _orderModel.otherBillState;
-    NSString *fourDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"40" ]];
-    NSString *fiveDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"50" ]];
-    NSString *sixDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"90" ]];
+    NSString *fourDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"s40" ]];
+    NSString *fiveDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"s50" ]];
+    NSString *sixDateStr = [BGControl dateToDateStringTwo:[otherBillStateDict valueForKey:@"s90" ]];
 
     
     if ([BGControl isNULLOfString:fiveDateStr]) {

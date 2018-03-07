@@ -620,9 +620,10 @@
         NSString *visiableFieldsStr = visiableFieldsArr[i];
         if ([visiableFieldsStr isEqualToString:@"K1MF301"]) {
             isyunPrice = true;
-        }else {
-            chaHei = 50;
         }
+    }
+    if (isyunPrice != true) {
+        chaHei = 50;
     }
     if (model.isDisplayEditButton || model.isDisplayDeleteButton || model.isDisplayCommitButton || model.isDisplayPayBillButton) {
         return 315 - chaHei;

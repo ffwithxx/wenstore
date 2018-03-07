@@ -136,8 +136,6 @@
     }else {
         self.guigeLab.text = [NSString stringWithFormat:@"%@ %@",@"规格:",model.k1dt003];
     }
-    CGFloat orderWidth = [BGControl labelAutoCalculateRectWith:self.orderNumLab.text FontSize:15 MaxSize:CGSizeMake(kScreenSize.width -91, 30)].width;
-    
     NSString *priceStr = [BGControl notRounding:model.k1dt201 afterPoint:lpdt042];
     priceOne = [NSDecimalNumber decimalNumberWithString:priceStr];
     self.priceLab.text = [NSString stringWithFormat:@"%@%@%@%@",@"￥",priceStr,@"/",model.k1dt005];

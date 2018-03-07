@@ -417,8 +417,6 @@
                     [updateDict setObject:[dict valueForKey:@"master"] forKey:@"master"];
                     [updateDict setObject:[dict valueForKey:@"detail"] forKey:@"detail"];
                     ScrapDetailVC *addVC = [storyboard instantiateViewControllerWithIdentifier:@"ScrapDetailVC"];
-                    NSMutableDictionary *dictOne = [[NSMutableDictionary alloc] init];
-                    
                     
                     addVC.datDict = responseBody[@"data"];
                     

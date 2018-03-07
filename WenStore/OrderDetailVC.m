@@ -870,7 +870,7 @@ if (sender.tag == 201) {
                         payVC.k1mf100 = [paymentDict valueForKey:@"k1mf100"];
                         payVC.sumPrice = [paymentDict valueForKey:@"payment"];
                         NSDictionary *masterDict = [self.datadict valueForKey:@"master"];
-                        NSDecimalNumber *sumPrice = [[masterDict valueForKey:@"k1mf301"] decimalNumberByAdding:[masterDict valueForKey:@"k1mf302"]];
+                        NSDecimalNumber *sumPrice = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",[masterDict valueForKey:@"k1mf301"]]] decimalNumberByAdding:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",[masterDict valueForKey:@"k1mf302"]]]];
                         payVC.sumPrice =sumPrice;
                             [self.navigationController pushViewController:payVC animated:YES];
                     }else {

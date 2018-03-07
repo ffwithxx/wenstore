@@ -218,7 +218,7 @@
 
 - (IBAction)buttonClick:(UIButton *)sender {
     if (_orderDelegate &&[_orderDelegate respondsToSelector:@selector(postoneStr:twoStr:withCount:withModel:)]) {
-        [_orderDelegate postoneStr:[NSString stringWithFormat:@"%ld",sender.tag] twoStr:oneModel.k1mf100 withCount:oneModel.k1mf303 withModel:oneModel ];
+        [_orderDelegate postoneStr:[NSString stringWithFormat:@"%ld",(long)sender.tag] twoStr:oneModel.k1mf100 withCount:oneModel.k1mf303 withModel:oneModel ];
     }
 }
 
