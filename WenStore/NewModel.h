@@ -47,6 +47,7 @@
 @property (nonatomic)NSInteger  maxHei;
 @property (nonatomic)NSInteger  bottomHei;
 @property (nonatomic)NSDecimalNumber *orderCount;
+@property (nonatomic)NSDecimalNumber *sys001;
 @property (nonatomic)NSInteger  jiCount;
 
 @property(nonatomic)NSMutableDictionary *freeDict;

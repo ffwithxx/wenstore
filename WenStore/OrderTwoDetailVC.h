@@ -83,4 +83,10 @@
 @property (strong, nonatomic) orderModel *orderModel;
 @property (strong, nonatomic) NSMutableDictionary *myDict;
 @property (assign, nonatomic) BOOL isji;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+
+
 @end

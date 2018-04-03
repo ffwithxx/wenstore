@@ -17,9 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     self.remarkTextView.text = self.remarkStr;
     [self.remarkTextView becomeFirstResponder];
     // Do any additional setup after loading the view.
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, 120);
+        self.leftImg.frame = CGRectMake(15, 52, 24, 16);
+        self.rightIMG.frame = CGRectMake(kScreenSize.width-75, 53, 20, 13);
+        self.saveLab.frame = CGRectMake(kScreenSize.width-55, 34, 40, 50);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+    }
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     if (sender.tag == 201) {

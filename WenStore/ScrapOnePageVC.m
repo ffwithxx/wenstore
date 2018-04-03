@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self IsIphoneX];
     postArr = [[NSMutableArray alloc] init];
     self.dataArray = [NSMutableArray new];
     postOneArr = [NSMutableArray array];
@@ -45,6 +46,19 @@
     bthTagStr = @"0";
      CategoryOne = 0;
     [self first];
+}
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        
+        
+        self.leftImg.frame = CGRectMake(15, 51, 22, 19);
+        self.rightImg.frame = CGRectMake(kScreenSize.width-32, 52, 17, 17);
+        self.oneView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, 40);
+        self.bigTableView.frame = CGRectMake(0, kNavHeight+40, kScreenSize.width, kScreenSize.height-40-kNavHeight);
+        
+    }
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     CGRect lineFrame = self.lineView.frame;

@@ -34,6 +34,17 @@
     [self first];
     // Do any additional setup after loading the view.
 }
+- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//
+//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.hidden = NO;
+    
+}
+- (IBAction)click:(UIButton *)sender {
+    NSLog(@"123");
+}
 
 -(void)first {
     self.admindText.keyboardType = UIKeyboardTypeASCIICapable;

@@ -17,5 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIView *fourView;
 @property (strong, nonatomic) IBOutlet UIView *threeView;
 @property (strong, nonatomic) IBOutlet UILabel *kehuNumLab;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
 
 @end

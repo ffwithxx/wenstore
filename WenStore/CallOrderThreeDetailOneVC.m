@@ -49,6 +49,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.navigationController.navigationBar.hidden = YES;
+     self.navigationItem.title = @"";
+    [self IsIphoneX];
     isSerch = NO;
     isFan = YES;
     headDict = [[NSMutableDictionary alloc] init];
@@ -64,6 +67,19 @@
     
     // Do any additional setup after loading the view.
 }
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+         self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.leftTableView.frame = CGRectMake(0, kNavHeight, 100, kScreenSize.height-kNavHeight-50);
+        self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), kNavHeight, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 50-kNavHeight);
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        self.searchImg.frame = CGRectMake(kScreenSize.width-67, 50, 17, 17);
+        self.jiaImg.frame = CGRectMake(kScreenSize.width-32, 50, 17, 17);
+       
+    }
+}
+
 -(void)first{
     rightDict = [[NSMutableDictionary alloc] init];
     dataDict = [[NSMutableDictionary alloc] init];
@@ -543,7 +559,7 @@
     
     
     // rightTableView
-    self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), 60, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 110);
+    self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), kNavHeight, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 50 - kNavHeight);
     // 默认选择左边tableView的第一行
     [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
 }
@@ -668,7 +684,7 @@
     if (kScreenSize.width == 320) {
         return 134;
     }
-    return 154;
+    return 178;
 }
 - (void)getOrderCount:(NSDecimalNumber *)count withKey:(NSString *)key withIndex:(NSInteger)index withPrice:(NSDecimalNumber *)price {
     [self hilldeAll];
@@ -780,7 +796,11 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{ // 监听tableView滑动
     [self selectLeftTableViewWithScrollView:scrollView];
 }
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.topItem.title = @"";
+}
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     
     // 重新选中一下当前选中的行数，不然会有bug

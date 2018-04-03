@@ -21,4 +21,8 @@
 @property (strong, nonatomic) NSMutableDictionary *dataDict;
 @property (strong, nonatomic) IBOutlet UILabel *jijiaLab;
 @property (strong, nonatomic) NSString *typeStr;//1是编辑页面  2是列表
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

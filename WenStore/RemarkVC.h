@@ -20,4 +20,12 @@
 @property (strong, nonatomic) IBOutlet UITextView *remarkTextView;
 @property (nonatomic, weak) id<RemarkDelegate> delegate;
 @property (nonatomic, strong) NSString *remarkStr;
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *rightIMG;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *saveLab;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+
 @end

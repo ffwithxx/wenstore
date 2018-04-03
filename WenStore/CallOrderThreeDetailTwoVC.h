@@ -17,6 +17,9 @@
 @property (strong, nonatomic) NSMutableArray *ruleArr;
 @property (strong, nonatomic) IBOutlet UIImageView *searchImg;
 @property (strong, nonatomic) IBOutlet UIButton *searchBth;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
 
+@property (strong, nonatomic) IBOutlet UIView *navView;
 
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

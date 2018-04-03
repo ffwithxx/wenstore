@@ -13,4 +13,10 @@
 @property (strong, nonatomic) IBOutlet UITableView *bigTableView;
 @property (strong, nonatomic) groupModel *dataDict;
 @property (strong, nonatomic) IBOutlet UILabel *titleLab;
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+
 @end

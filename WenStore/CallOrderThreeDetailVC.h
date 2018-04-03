@@ -51,5 +51,9 @@
 @property (strong, nonatomic) IBOutlet UIView *ZZview;
 @property (strong, nonatomic) IBOutlet UIScrollView *bigScrollView;
 @property (strong, nonatomic) IBOutlet UIView *TwoView;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
 
 @end

@@ -41,6 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self isIphoneX];
     isEnablePayment = [[NSUserDefaults standardUserDefaults] valueForKey:@"isEnablePayment"];
     self.dataArray = [NSMutableArray new];
     postOneArr = [NSMutableArray array];
@@ -68,6 +69,16 @@
     }
     
     // Do any additional setup after loading the view.
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        self.leftImg.frame = CGRectMake(15, 52, 24, 16);
+        self.rightImg.frame = CGRectMake(kScreenSize.width-73, 52, 20, 13);
+        self.rightLab.frame = CGRectMake(kScreenSize.width-55, 34, 40, 50);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+    }
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];

@@ -63,6 +63,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     
+    
     if ([isShan isEqualToString:@"2"]) {
         uploadImagesArr =chongArr;
         for (UIView *view in [self.bigScrollView subviews]) {
@@ -88,6 +89,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     isShan = @"1";
+     [self isIphoneX];
     [self firstTwo];
     jsob001Str = [self.datadict valueForKey:@"jsob001"];
     isEnablePayment = [[NSUserDefaults standardUserDefaults] valueForKey:@"isEnablePayment"];
@@ -161,7 +163,14 @@
 
     // Do any additional setup after loading the view.
 }
-
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+         self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+    }
+}
 -(void)firstTwo {
 
     _images = [NSMutableArray array];

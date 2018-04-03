@@ -17,4 +17,7 @@
 @property (strong, nonatomic) NSString *idStr;
 @property (strong, nonatomic) NSString *typeStr;//1为点击整面，2位点击核定
 @property (strong, nonatomic) IBOutlet UIButton *searchBth;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

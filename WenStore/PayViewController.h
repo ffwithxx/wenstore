@@ -19,4 +19,11 @@
 @property (strong, nonatomic) NSString *fanStr;
 @property (strong, nonatomic) NSString *k1mf100;
 @property (strong, nonatomic) NSDecimalNumber *sumPrice;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+
+
+
 @end

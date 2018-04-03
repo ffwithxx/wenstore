@@ -26,6 +26,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *sumOrderCount;
 @property (strong, nonatomic) IBOutlet UIButton *addOrderBth;
 @property (strong, nonatomic) IBOutlet UIButton *searchBth;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
 
 @property (strong, nonatomic) NSArray *reasonsArr;
 @end

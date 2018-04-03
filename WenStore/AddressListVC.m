@@ -22,12 +22,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     self.dataArray = [NSMutableArray new];
     self.dataArray = self.arr;
     self.bigTableView.showsVerticalScrollIndicator = NO;
     self.bigTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     // Do any additional setup after loading the view.
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+   
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 51, 22, 19);
+        
+        
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        self.bigTableView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        
+    }
+}
+
 - (IBAction)buttonClick:(UIButton *)sender {
     if (sender.tag == 201) {
         [self.navigationController popViewControllerAnimated:YES];

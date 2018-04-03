@@ -141,22 +141,22 @@
     CGFloat oneHei = Imgwidth/3;
     CGFloat numWidth = [BGControl labelAutoCalculateRectWith:@"9999.999" FontSize:14 MaxSize:CGSizeMake(MAXFLOAT, oneHei)].width;
     
-        self.commodityImg.frame = CGRectMake(marginWidth, marginWidth, Imgwidth, Imgwidth);
+     self.commodityImg.frame = CGRectMake(marginWidth, marginWidth, Imgwidth, Imgwidth);
      self.nameLab.frame = CGRectMake(Imgwidth+marginWidth*2, marginWidth, self.contentView.frame.size.width - Imgwidth-marginWidth*3, oneHei);
        self.specificationsLab.frame = CGRectMake(Imgwidth+marginWidth*2, marginWidth+oneHei, self.contentView.frame.size.width - Imgwidth-marginWidth*3, oneHei);
 //    self.stockLab.frame = CGRectMake(110, 55, self.contentView.frame.size.width - 125, 20);
-    self.jiaImg.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth, Imgwidth+marginWidth*2, shopWidth, shopWidth);
-    self.jianImg.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth*2-numWidth, Imgwidth+marginWidth*2, shopWidth, shopWidth);
-    self.shouLab.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth*2-numWidth-70, Imgwidth+marginWidth*2, 65, shopWidth);
+    self.jiaImg.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth, Imgwidth+marginWidth*2+shopWidth, shopWidth, shopWidth);
+    self.jianImg.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth*2-numWidth, Imgwidth+marginWidth*2+shopWidth, shopWidth, shopWidth);
+    self.shouLab.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth*2-numWidth-70, Imgwidth+marginWidth*2+shopWidth, 65, shopWidth);
     self.shouLab.text = @"收货量:";
-    self.peiLab.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth*2-numWidth-70, Imgwidth+marginWidth*2-shopWidth, 65, shopWidth);
+    self.peiLab.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth*2-numWidth-70, Imgwidth+marginWidth*2, 65, shopWidth);
     self.peiLab.text = @"配货量:";
     
     self.plusBth.frame = _jiaImg.frame;
     //    self.plusBth.backgroundColor = kTabBarColor;
     self.minusBth.frame =  _jianImg.frame;
-    self.peiCountLab.frame =CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth-numWidth, Imgwidth+marginWidth*2-shopWidth, numWidth, shopWidth);
-    self.orderCountLab.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth-numWidth, Imgwidth+marginWidth*2, numWidth, shopWidth);
+    self.peiCountLab.frame =CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth-numWidth, Imgwidth+marginWidth*2, numWidth, shopWidth);
+    self.orderCountLab.frame = CGRectMake(self.contentView.frame.size.width -marginWidth-shopWidth-numWidth, Imgwidth+marginWidth*2+shopWidth, numWidth, shopWidth);
     //    self.orderCountLab.backgroundColor = kTabBarColor;
     self.orderButton.frame = self.orderCountLab.frame;
     

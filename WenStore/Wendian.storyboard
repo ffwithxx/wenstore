@@ -22,11 +22,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" id="mls-ec-Tz0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="采购进货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k8f-vb-A8K">
-                                                <rect key="frame" x="0.0" y="10" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="10" width="375" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,7 +48,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                             </imageView>
                                             <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YX6-XB-XCK">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                 <connections>
                                                     <action selector="buttonClick:" destination="epC-M7-uG5" eventType="touchUpInside" id="t1b-h1-8Uz"/>
@@ -57,8 +57,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.80000000000000004" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="in8-KL-Bjc">
-                                        <rect key="frame" x="0.0" y="60" width="375" height="40"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="in8-KL-Bjc">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Qb-ea-rGd">
@@ -89,23 +89,23 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="BtA-ZT-wyy">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="BtA-ZT-wyy">
+                                        <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3023Nodata.png" id="zaE-ug-a3i">
-                                                <rect key="frame" x="141" y="92" width="93" height="93"/>
+                                                <rect key="frame" x="141" y="91" width="93" height="93"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无门市进货记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HrT-94-zPr">
-                                                <rect key="frame" x="0.0" y="195" width="375" height="40"/>
+                                                <rect key="frame" x="0.0" y="194" width="375" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.2156862745" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="315" sectionHeaderHeight="28" sectionFooterHeight="28" id="rf2-vN-Swa">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
@@ -339,8 +339,14 @@
                     </view>
                     <connections>
                         <outlet property="bigTableView" destination="rf2-vN-Swa" id="ih3-nb-OW4"/>
+                        <outlet property="bigView" destination="BtA-ZT-wyy" id="ScI-Ai-iFQ"/>
+                        <outlet property="leftImg" destination="dtO-io-tk2" id="VMk-oT-1ae"/>
                         <outlet property="lineView" destination="xZK-Ue-Ege" id="6JO-HI-PpV"/>
+                        <outlet property="navView" destination="mls-ec-Tz0" id="YLQ-SR-Y4r"/>
                         <outlet property="oneBth" destination="4Qb-ea-rGd" id="0vp-Zj-piZ"/>
+                        <outlet property="oneView" destination="in8-KL-Bjc" id="jlb-yA-sBK"/>
+                        <outlet property="rightImg" destination="ERR-cq-wWq" id="07O-zz-Hzi"/>
+                        <outlet property="titLab" destination="k8f-vb-A8K" id="dCm-uz-MwJ"/>
                         <outlet property="twoBth" destination="qpY-rx-bBN" id="ksX-q5-nOi"/>
                     </connections>
                 </viewController>
@@ -4245,8 +4251,8 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="tW9-dq-TrS">
-                                        <rect key="frame" x="100" y="60" width="274" height="607"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="tW9-dq-TrS">
+                                        <rect key="frame" x="100" y="64" width="274" height="603"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -4265,12 +4271,12 @@
                                             <outlet property="delegate" destination="hzc-uA-QUu" id="QJk-D9-rqF"/>
                                         </connections>
                                     </tableView>
-                                    <view contentMode="scaleToFill" id="Qav-Ag-2u9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="Qav-Ag-2u9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="采购进货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AvI-bJ-JnH">
-                                                <rect key="frame" x="50" y="10" width="293" height="50"/>
+                                                <rect key="frame" x="50" y="10" width="293" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4285,7 +4291,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                             </imageView>
                                             <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W7V-I2-OAr">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                 <connections>
                                                     <action selector="buttonClick:" destination="hzc-uA-QUu" eventType="touchUpInside" id="ME5-uF-WuD"/>
@@ -4301,8 +4307,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.80000000000000004" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="pqx-pT-QAQ">
-                                        <rect key="frame" x="0.0" y="60" width="100" height="607"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="pqx-pT-QAQ">
+                                        <rect key="frame" x="0.0" y="64" width="100" height="603"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -4338,10 +4344,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="leftImg" destination="9mg-Dl-j9x" id="KYy-PN-x60"/>
                         <outlet property="leftTableView" destination="pqx-pT-QAQ" id="d9X-gb-xTD"/>
+                        <outlet property="navView" destination="Qav-Ag-2u9" id="Ynk-AE-19a"/>
                         <outlet property="rightTableView" destination="tW9-dq-TrS" id="DGm-hx-yAn"/>
                         <outlet property="searchBth" destination="wGf-5v-GAO" id="7Hk-4F-IaU"/>
                         <outlet property="searchImg" destination="ong-Mh-a4N" id="w9e-xy-Cud"/>
+                        <outlet property="titLab" destination="AvI-bJ-JnH" id="FIf-eX-FPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgg-jU-ac6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4360,12 +4369,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="ily-pR-Azd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="ily-pR-Azd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="采购进货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hER-6B-edK">
-                                                <rect key="frame" x="50" y="10" width="293" height="50"/>
+                                                <rect key="frame" x="50" y="10" width="293" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4380,7 +4389,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                             </imageView>
                                             <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8aw-1R-W5V">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                 <connections>
                                                     <action selector="buttonClick:" destination="w6G-GV-3d1" eventType="touchUpInside" id="KJY-eF-1cl"/>
@@ -4396,8 +4405,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.80000000000000004" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="sxj-Jc-v7W">
-                                        <rect key="frame" x="100" y="60" width="274" height="557"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="sxj-Jc-v7W">
+                                        <rect key="frame" x="100" y="64" width="274" height="553"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -4416,8 +4425,8 @@
                                             <outlet property="delegate" destination="w6G-GV-3d1" id="SSH-Fg-FSt"/>
                                         </connections>
                                     </tableView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="NBq-SC-SQl">
-                                        <rect key="frame" x="0.0" y="60" width="100" height="557"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="NBq-SC-SQl">
+                                        <rect key="frame" x="0.0" y="64" width="100" height="553"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -4485,11 +4494,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="leftImg" destination="Fgb-yx-EoJ" id="m1j-y9-PDk"/>
                         <outlet property="leftTableView" destination="NBq-SC-SQl" id="klj-Ud-2vi"/>
+                        <outlet property="navView" destination="ily-pR-Azd" id="Fmq-tV-amz"/>
                         <outlet property="rightTableView" destination="sxj-Jc-v7W" id="MUZ-3f-rjr"/>
                         <outlet property="searchBth" destination="InK-na-M3b" id="OSI-VV-xD2"/>
                         <outlet property="searchImg" destination="f9a-jA-r2g" id="tVF-wP-WaR"/>
                         <outlet property="sumpriceLab" destination="C5h-qD-ldT" id="bWo-2X-bna"/>
+                        <outlet property="titLab" destination="hER-6B-edK" id="N6m-Tg-Ie2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SB-fU-27k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4508,12 +4520,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="wjn-g6-aoF">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="wjn-g6-aoF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进货详情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D8K-Xb-qrZ">
-                                                <rect key="frame" x="0.0" y="10" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="10" width="375" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4684,7 +4696,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="iX4-a5-ttu">
-                                        <rect key="frame" x="0.0" y="60" width="375" height="557"/>
+                                        <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -4772,10 +4784,13 @@
                         <outlet property="bottomLab" destination="ZPd-v9-Xie" id="hBC-qt-u98"/>
                         <outlet property="caigouDate" destination="fUN-Ri-inj" id="gig-j3-QYt"/>
                         <outlet property="footerView" destination="3SO-PV-heQ" id="L5u-G8-jxH"/>
+                        <outlet property="leftImg" destination="IIM-Xa-gVm" id="6fQ-Ms-ml2"/>
+                        <outlet property="navView" destination="wjn-g6-aoF" id="ncm-CW-sPs"/>
                         <outlet property="remarkField" destination="xEH-1E-yxE" id="hgU-qG-1wc"/>
                         <outlet property="sumCountLab" destination="UDk-gb-hlV" id="8iS-lK-VCi"/>
                         <outlet property="sumPriceLab" destination="6I9-zK-ktD" id="THD-4Q-NOk"/>
                         <outlet property="sumPriceOne" destination="2Jr-1s-TOL" id="Fz4-QB-UW8"/>
+                        <outlet property="titLab" destination="D8K-Xb-qrZ" id="BcZ-qG-Qcu"/>
                         <outlet property="topView" destination="6KE-Oq-5ge" id="kDG-Gz-9Ew"/>
                     </connections>
                 </viewController>

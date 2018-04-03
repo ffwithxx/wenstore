@@ -40,6 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self IsIphoneX];
     postArr = [[NSMutableArray alloc] init];
     CategoryOne = 0;
     self.dataArray = [NSMutableArray new];
@@ -49,6 +50,15 @@
     self.bigTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     bthTagStr = @"0";
     [self first];
+}
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+       self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+    }
 }
 
 - (void)first {
@@ -67,6 +77,7 @@
     [self.bigTableView.mj_header beginRefreshing];
    
 }
+
 -(void)getDate {
     
         postDict = [[NSMutableDictionary alloc] init];
@@ -145,8 +156,9 @@
         if (self.dataArray.count <1) {
             self.bigTableView.hidden = YES;
             
+            
         }else {
-            self.bigTableView.hidden = NO;
+                        self.bigTableView.hidden = NO;
         }
         
         [self.bigTableView reloadData];
@@ -238,6 +250,7 @@
     }else if ([idStr isEqualToString:@"304"]){
         if (model.billState == 0 ||model.billState == 10) {
             CallOrderThreeDetailOneVC *callOrder = [storyboard instantiateViewControllerWithIdentifier:@"CallOrderThreeDetailOneVC"];
+            callOrder.navigationController.navigationBar.hidden = YES;
             callOrder.idStr = model.k1mf100;
             [self.navigationController pushViewController:callOrder animated:YES];
             

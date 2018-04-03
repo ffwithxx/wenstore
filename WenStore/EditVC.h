@@ -32,4 +32,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *searchTitleLab;
 @property (strong, nonatomic) IBOutlet UILabel *searchLab;
 @property (strong, nonatomic) IBOutlet UIImageView *searchImg;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+
 @end

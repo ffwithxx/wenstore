@@ -776,7 +776,7 @@
 }
 - (void)LoginByCustId:(NSString *)custId withUrl:(NSString *)urlStr withAccount:(NSString *)account withPassword:(NSString *)password withStoreId:(NSString *)storeId isShow:(BOOL)isShow withArr:(NSArray *)userResponsed progressBlock:(ProgressBlock)progress success:(SuccessBlock)success failure:(FailureBlcok)failure {
   
-      NSString *token = [[NSUserDefaults standardUserDefaults]valueForKey:@"token"];
+//      NSString *token = [[NSUserDefaults standardUserDefaults]valueForKey:@"token"];
     NSLog(@"%@",_url);
     if (isShow) {
           _dict = [NSDictionary dictionaryWithObjectsAndKeys:custId,@"custId",account,@"account",password,@"password",storeId,@"storeId",userResponsed,@"userResponsed", nil];
@@ -789,7 +789,7 @@
   
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml", @"text/xml",@"text/html",@"text/plain",@"application/json", nil];
     [manager.requestSerializer  setValue:@"application/json"  forHTTPHeaderField:@"Content－Type"];
-  [manager.requestSerializer setValue:token forHTTPHeaderField:@"apptoken"];
+ 
      [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
     NSString *cookie = [[NSUserDefaults standardUserDefaults] valueForKey:@"cook"];
  //[manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
@@ -811,7 +811,7 @@
             if (![BGControl isNULLOfString:cookieString]) {
                 [[NSUserDefaults standardUserDefaults] setObject:cookieString forKey:@"cook"];
             }
-
+            [[NSUserDefaults standardUserDefaults] setObject:[[dict valueForKey:@"data"]valueForKey:@"token"] forKey:@"token"];
             NSError *error;
             NSString *jsonString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             NSLog(@"%@",jsonString);
@@ -886,7 +886,7 @@
     [manager.requestSerializer setValue:token forHTTPHeaderField:@"apptoken"];
     [manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
     [manager.requestSerializer setValue:appcustid forHTTPHeaderField:@"appcustid"];
-      [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
+//      [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml", @"text/xml",@"text/html",@"text/plain",@"application/json", nil];
     _dict = [NSDictionary dictionaryWithObjectsAndKeys:userResponsed,@"userResponsed", nil];
     [manager POST:_url parameters:_dict progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -1318,9 +1318,9 @@
     NSString *cookie = [[NSUserDefaults standardUserDefaults] valueForKey:@"cook"];
     NSString *token = [[NSUserDefaults standardUserDefaults]valueForKey:@"token"];
     NSString *appcustid = [[NSUserDefaults standardUserDefaults]valueForKey:@"appcustid"];
-    [manager.requestSerializer setValue:token forHTTPHeaderField:@"apptoken"];
-    [manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
-    [manager.requestSerializer setValue:appcustid forHTTPHeaderField:@"appcustid"];
+//    [manager.requestSerializer setValue:token forHTTPHeaderField:@"apptoken"];
+//    [manager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
+//    [manager.requestSerializer setValue:appcustid forHTTPHeaderField:@"appcustid"];
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"newapp"];
     [manager POST:urlStr parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {

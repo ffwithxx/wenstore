@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
      CategoryOne = 0;
     postArr = [[NSMutableArray alloc] init];
     self.dataArray = [NSMutableArray new];
@@ -48,6 +49,17 @@
     [self first];
 
     // Do any additional setup after loading the view.
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        if (kiPhoneX) {
+            self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+            self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+            self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+            self.oneView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, 40);
+            self.bigView.frame = CGRectMake(0, kNavHeight+40, kScreenSize.width, kScreenSize.height-kNavHeight-40);
+        }
+    }
 }
 - (void)first {
     

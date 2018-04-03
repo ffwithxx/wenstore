@@ -20,10 +20,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     [self first];
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.title = @"账户详情";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.hidden = NO;
+    
+    
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+    }
+}
 -(void)first {
     NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"loginData"];
     loginDict = [BGControl dictionaryWithJsonString:jsonString];

@@ -39,7 +39,7 @@
     [super viewDidLoad];
     timeStr = @"201";
     CategoryOne = 0;
-    
+    [self IsIphoneX];
     postArr = [NSMutableArray new];
     postOneArr = [NSMutableArray array];
     postDict = [[NSMutableDictionary alloc] init];
@@ -50,7 +50,18 @@
     [self first];
 
 }
-
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+       
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+         self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 51, 22, 19);
+        self.rightImg.frame = CGRectMake(kScreenSize.width-32, 52, 17, 17);
+        self.oneView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, 40);
+        self.bigView.frame = CGRectMake(0, kNavHeight+40, kScreenSize.width, kScreenSize.height-40-kNavHeight);
+       
+    }
+}
 - (void)first {
     
     MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

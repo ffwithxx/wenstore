@@ -39,6 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self IsIphoneX];
     lpdt043 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"3022lpdt043"] ] integerValue];
     lpdt036 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"3022lpdt036"] ] integerValue];
     lpdt042 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"3022lpdt042"] ] integerValue];
@@ -74,7 +75,17 @@
      [self first];
 
 }
-
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+       self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        self.bigTableView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight-50);
+        
+        
+    }
+}
 - (void)first {
     NSDictionary *masterDict = [self.dataDict valueForKey:@"master"];
     NSArray *time = [[BGControl dateToDateStringTwo:[masterDict valueForKey:@"k1mf003"]] componentsSeparatedByString:@" "];

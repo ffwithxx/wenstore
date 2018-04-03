@@ -23,4 +23,7 @@
 @property (strong, nonatomic) NSString *typeStr;
 @property (strong, nonatomic) NSString *k1mf107;
 @property (strong, nonatomic) NSString *k1mf101;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

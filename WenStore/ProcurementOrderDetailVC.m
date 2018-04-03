@@ -51,6 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self IsIphoneX];
     [self Progress];
     dataDict = [NSMutableDictionary new];
     self.dataArray = [NSMutableArray new];
@@ -124,6 +125,18 @@
     }
      [self setView];
      [self first];
+}
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.bigTableVIew.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight-50);
+       
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        
+        
+        
+    }
 }
 - (void)Progress {
     NSString *oneDateStr = [BGControl dateToDateStringTwo:_orderModel.k1mf997];

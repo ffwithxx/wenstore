@@ -168,19 +168,21 @@
         }
     }
     
-    if (![BGControl isNULLOfString:self.stockLab.text ]) {
-        NSDecimalNumber *num = self.numCount;
-        if (![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"有货"]) {
-            num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
-            
-        }
-        NSComparisonResult res = [self.numCount compare:num];
-        if (res == NSOrderedDescending) {
-            self.numCount = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
-            desStr = [NSString stringWithFormat:@"%@%@%@%@",oneModel.k1dt002,@"可定量最多为",[BGControl notRounding:num afterPoint:lpdt036],oneModel.k1dt005];
-            
-            
-        }
+    NSDecimalNumber *sys001 = oneModel.sys001;
+    NSDecimalNumber *com = [NSDecimalNumber decimalNumberWithString:@"0"];
+    NSComparisonResult  sysCompar = [sys001 compare:com];
+    NSDecimalNumber *num = self.numCount;
+    if (sysCompar == NSOrderedDescending) {
+        
+        num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001]];
+        
+    }
+    NSComparisonResult res = [self.numCount compare:num];
+    if (res == NSOrderedDescending) {
+        self.numCount = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001]];
+        desStr = [NSString stringWithFormat:@"%@%@%@%@",oneModel.k1dt002,@"可定量最多为",[BGControl notRounding:num afterPoint:lpdt036],oneModel.k1dt005];
+        
+        
     }
     
     
@@ -403,11 +405,7 @@
     self.orderCountLab.text = [BGControl notRounding:model.orderCount afterPoint:lpdt036];
     NSString *priceStr = [BGControl notRounding:model.originaltest afterPoint:lpdt042];
     NSString *str = [NSString stringWithFormat:@"%@",model.originaltest];
-    if (![str isEqualToString:@"0"]) {
-        self.priceLab.text = [NSString stringWithFormat:@"%@%@%@%@",@"￥",priceStr,@"/",model.k1dt005];
-    }else{
-        self.priceLab.text = @"";
-    }
+    
     
     
     NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"ResourceData"];
@@ -430,16 +428,17 @@
         self.stockLab.hidden = NO;
     }
     
-    if (!isPrice) {
-        self.priceLab.hidden = YES;
+    if (![str isEqualToString:@"0"] && isPrice) {
+        self.priceLab.text = [NSString stringWithFormat:@"%@%@%@%@",@"￥",priceStr,@"/",model.k1dt005];
     }else{
-        self.priceLab.hidden = NO;
+        self.priceLab.text = [NSString stringWithFormat:@"%@",model.k1dt005];
     }
-    
-    NSDecimalNumber *sysDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",model.sys001Text]];
+    NSDecimalNumber *sysDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",model.sys001]];
     NSDecimalNumber *bijiaoNum = [NSDecimalNumber decimalNumberWithString:@"0"];
     NSComparisonResult res = [sysDec compare:bijiaoNum];
-    if (res == NSOrderedSame||[[NSString stringWithFormat:@"%@",model.sys001Text] isEqualToString:@"无货"]) {
+    
+    
+    if (res == NSOrderedSame) {
         self.jiaImg.hidden = YES;
         self.plusBth.enabled = NO;
         self.remindButton.hidden = NO;

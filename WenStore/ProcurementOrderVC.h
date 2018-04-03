@@ -27,4 +27,8 @@
 @property (strong, nonatomic) NSString *typeStr;
 @property (strong, nonatomic) NSString *idStr;
 @property (strong, nonatomic) NSMutableDictionary *dataDict;
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

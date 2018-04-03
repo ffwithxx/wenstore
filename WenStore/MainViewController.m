@@ -59,9 +59,10 @@
 @implementation MainViewController
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
+    [self IsIphoneX];
     NSString *jsonString = [[NSUserDefaults standardUserDefaults]valueForKey:@"loginData"];
-    
     loginDict = [BGControl dictionaryWithJsonString:jsonString];
     oneArr = [NSMutableArray array];
     twoArr = [NSMutableArray array];
@@ -77,7 +78,16 @@
    
     // Do any additional setup after loading the view.
 }
-
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigScrollview.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        self.rightImg.frame = CGRectMake(kScreenSize.width-40, 48, 25, 22);
+        self.CountLab.frame = CGRectMake(kScreenSize.width-20, 44, 10, 10);
+    }
+}
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -163,7 +173,10 @@
             self.CountLab.font = [UIFont systemFontOfSize:10];
             self.CountLab.clipsToBounds = YES;
             self.CountLab.layer.cornerRadius = oneNumWidth /2 +3;
-            self.CountLab.frame = CGRectMake(kScreenSize.width-20, 20, oneNumWidth+6, oneNumWidth+6);
+            CGRect countFRame = self.CountLab.frame;
+            countFRame.size.width = oneNumWidth+6;
+            countFRame.size.height = oneNumWidth+6;
+            [self.CountLab setFrame:countFRame];
             if ([self.CountLab.text isEqualToString:@"0"]) {
                 self.CountLab.hidden = YES;
             }else {
@@ -196,7 +209,8 @@
     self.infoScrollview.showsHorizontalScrollIndicator = NO;
     self.infoScrollview.scrollEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.bigScrollview.frame = CGRectMake(0, 60, kScreenSize.width, kScreenSize.height - 60);
+   
+    
     if (isShow == NO) {
         self.oneView.hidden = YES;
         headerHei = 15;
@@ -372,7 +386,8 @@
                 
                 [self presentViewController:alertController animated:YES completion:nil];
             } }else {
-                NSString *str = [responseBody valueForKey:@"errors"][0];
+//                NSString *str = [responseBody valueForKey:@"errors"][0];
+                 NSString *str = [responseBody[@"data"] valueForKey:@"message"];
                 [self Alert:str];
                 
             }

@@ -58,7 +58,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [super viewDidLoad];
+    [self IsIphoneX];
      rightorXia = @"right";
     isFan = YES;
     dataDict = [[NSMutableDictionary alloc] init];
@@ -78,6 +78,17 @@
     lpdt042 = [[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"lpdt042"] ] integerValue];
     [self firstOne];
     [self first];
+}
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.leftTableView.frame = CGRectMake(0, kNavHeight, 100, kScreenSize.height-kNavHeight-50);
+        self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), kNavHeight, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 50-kNavHeight);
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        self.forecastLab.frame = CGRectMake(kScreenSize.width-50, 34, 35, 50);
+        self.topview.frame = CGRectMake(65, 40, kScreenSize.width-130, 35);
+        
+    }
 }
 - (UITableView *)tableView
 
@@ -917,7 +928,7 @@
     
     
     // rightTableView
-    self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), 60, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 110);
+    self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), kNavHeight, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 50-kNavHeight);
     // 默认选择左边tableView的第一行
     [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
 }

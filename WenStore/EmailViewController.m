@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     indexNum = 0;
     self.dataArray = [NSMutableArray new];
     postOneArr = [NSMutableArray array];
@@ -38,6 +39,16 @@
     self.bigTableView.dataSource = self;
     [self first];
     
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigTableView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        self.leftImg.frame = CGRectMake(15, 52, 24, 16);
+        self.rightImg.frame = CGRectMake(kScreenSize.width-72, 50, 20, 13);
+        self.rightLab.frame = CGRectMake(kScreenSize.width-55, 34, 40, 50);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+    }
 }
 - (void)first {
     [self show];

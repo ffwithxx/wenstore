@@ -24,11 +24,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self IsIphoneX];
     _searArray = [NSMutableArray array];
     _namesArray = [NSArray array];
     [self first];
     
     // Do any additional setup after loading the view.
+}
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        self.rightLab.frame = CGRectMake(kScreenSize.width-50, 34, 35, 50);
+        self.topView.frame = CGRectMake(65, 40, kScreenSize.width-130, 35);
+        self.bgView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        
+    }
 }
 
 - (void)first {

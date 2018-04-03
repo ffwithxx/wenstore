@@ -40,5 +40,8 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *bigtableView;
 @property (strong, nonatomic)NSMutableDictionary *dataDict;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLab;
 
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
 @end

@@ -44,6 +44,7 @@
 @implementation ProcurementOrderOnePagVC
 
 -(void)viewWillAppear:(BOOL)animated {
+     [self isIphoneX];
     timeStr = @"201";
     CategoryOne = 0;
     postArr = [NSMutableArray new];
@@ -55,6 +56,19 @@
     self.bigTableView.dataSource = self;
     [self first];
 
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+     self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 52, 24, 16);
+        self.rightImg.frame = CGRectMake(kScreenSize.width-73, 52, 20, 13);
+        self.rightLab.frame = CGRectMake(kScreenSize.width-55, 34, 40, 50);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+//        self.oneView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, 40);
+        self.bgView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+//        self.bigTableView .frame = CGRectMake(0, kNavHeight+40, kScreenSize.width, kScreenSize.height-40-kNavHeight);
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

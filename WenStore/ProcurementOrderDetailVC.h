@@ -75,4 +75,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *sixTimeLab;
 @property (strong, nonatomic) ProcurementOrderOnePagModel *orderModel;
 @property (assign, nonatomic) NSUInteger tagNum;
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

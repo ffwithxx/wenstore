@@ -14,4 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) IBOutlet UILabel *tyleLabel;
 @property (nonatomic,strong) MMDrawerController *drawerController;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+
 @end

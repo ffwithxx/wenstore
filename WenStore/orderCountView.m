@@ -126,14 +126,16 @@
                  }
              }
              NSDecimalNumber *numone = fanDec;
-             
-             if (![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"有货"]&&![BGControl isNULLOfString:[NSString stringWithFormat:@"%@",self.model.sys001Text]]) {
-                 numone = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001Text]];
+             NSDecimalNumber *sys001 = self.model.sys001;
+             NSDecimalNumber *com = [NSDecimalNumber decimalNumberWithString:@"0"];
+             NSComparisonResult  sysCompar = [sys001 compare:com];
+             if (sysCompar == NSOrderedDescending) {
+                 numone = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001]];
                  
              }
              NSComparisonResult res = [fanDec compare:numone];
              if (res == NSOrderedDescending) {
-                 fanDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001Text]];
+                 fanDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001]];
                  desStr = [NSString stringWithFormat:@"%@%@%@%@",self.model.k1dt002,@"可定量最多为",[BGControl notRounding:numone afterPoint:lpdt036],self.model.k1dt005];
                  
                  
@@ -190,19 +192,20 @@
                 
             }
 
-            if (![BGControl isNULLOfString:self.model.sys001Text]) {
-                NSDecimalNumber *num = [NSDecimalNumber decimalNumberWithString:@"0"];
-                if (![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",self.model.sys001Text] isEqualToString:@"有货"]&&![BGControl isNULLOfString:[NSString stringWithFormat:@"%@",self.model.sys001Text]]) {
-                    num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001Text]];
-                    
-                }
-                NSComparisonResult res = [[NSDecimalNumber decimalNumberWithString:self.orderFile.text] compare:num];
-                if (res == NSOrderedDescending) {
-                    fanDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001Text]];
-                    desStr = [NSString stringWithFormat:@"%@%@%@%@",self.model.k1dt002,@"可定量最多为",[BGControl notRounding:num afterPoint:lpdt036],self.model.k1dt005];
-                    
-                    
-                }
+            NSDecimalNumber *numone = fanDec;
+            NSDecimalNumber *sys001 = self.model.sys001;
+            NSDecimalNumber *com = [NSDecimalNumber decimalNumberWithString:@"0"];
+            NSComparisonResult  sysCompar = [sys001 compare:com];
+            if (sysCompar == NSOrderedDescending) {
+                numone = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001]];
+                
+            }
+            NSComparisonResult res = [fanDec compare:numone];
+            if (res == NSOrderedDescending) {
+                fanDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",self.model.sys001]];
+                desStr = [NSString stringWithFormat:@"%@%@%@%@",self.model.k1dt002,@"可定量最多为",[BGControl notRounding:numone afterPoint:lpdt036],self.model.k1dt005];
+                
+                
             }
             NSString *isFan;
             NSComparisonResult bijiaoRes = [fanDec compare:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%d",count]]];

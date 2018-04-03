@@ -51,6 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self IsIphoneX];
     rightorXia = @"right";
     isSerch = NO;
     istrue = false;
@@ -71,6 +72,20 @@
     [self first];
 
 }
+- (void)IsIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titleLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        
+        self.leftTableView.frame = CGRectMake(0, kNavHeight, 100, kScreenSize.height-kNavHeight-50);
+        self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), kNavHeight, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 50-kNavHeight);
+        self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+        self.searchImg.frame = CGRectMake(kScreenSize.width-32, 50, 17, 17);
+        
+        
+    }
+}
+
 - (void)first {
 
     rightDict = [[NSMutableDictionary alloc] init];
@@ -714,7 +729,7 @@
     
     
     // rightTableView
-    self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), 60, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 110);
+    self.rightTableView.frame = CGRectMake(CGRectGetMaxX(self.leftTableView.frame), kNavHeight, kScreenSize.width -self.leftTableView.frame.size.width , kScreenSize.height - 50-kNavHeight);
     // 默认选择左边tableView的第一行
     [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
 }

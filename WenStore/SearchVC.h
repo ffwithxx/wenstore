@@ -34,5 +34,10 @@
 @property (weak, nonatomic)  id<fanDataDelegate > delegate;
 @property (weak, nonatomic)  id<callOrderFanDataDelegate > fanDelegate;
 @property (nonatomic, assign) NSInteger maxCount;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *rightLab;
+@property (strong, nonatomic) IBOutlet UIView *bgView;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+
 - (IBAction)TextField_DidEndOnExit:(id)sender;
 @end

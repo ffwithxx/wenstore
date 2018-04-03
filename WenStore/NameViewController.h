@@ -18,4 +18,8 @@
 @property (strong, nonatomic) IBOutlet UITableView *bigTableView;
 @property (nonatomic,strong) NSMutableArray *arr;
 @property (nonatomic, weak) id<NameDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+
 @end

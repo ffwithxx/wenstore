@@ -38,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self isIphoneX];
     self.sumPriceOne.textColor = kredColor;
     self.sumPriceOne.textColor = kredColor;
     
@@ -79,6 +80,16 @@
     
     [self first];
 
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        if (kiPhoneX) {
+            self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+            self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+            self.leftImg.frame = CGRectMake(15, 49, 22, 19);
+            self.bigTableView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight-50);
+        }
+    }
 }
 - (void)first {
     NSDictionary *masterDict = [self.dataDict valueForKey:@"master"];

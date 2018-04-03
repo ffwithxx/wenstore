@@ -19,5 +19,13 @@
 @property (strong, nonatomic) NSMutableDictionary *dataDict;
 @property (strong, nonatomic) IBOutlet UIView *nodataView;
 @property (strong, nonatomic) IBOutlet UIView *bigView;
+@property (strong, nonatomic) IBOutlet UIView *noDataView;
 
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UIImageView *rightImg;
+@property (strong, nonatomic) IBOutlet UILabel *rightLab;
+@property (strong, nonatomic) IBOutlet UIView *oneView;
+@property (strong, nonatomic) IBOutlet UIView *bgView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

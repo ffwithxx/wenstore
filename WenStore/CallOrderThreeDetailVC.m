@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     self.bigTableView.delegate = self;
     self.bigTableView.dataSource = self;
     postArr = [NSMutableArray new];
@@ -69,7 +70,24 @@
     
     [self first];
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 51, 22, 19);
+        
+        
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        
+        
+    }
+}
 /**
  进度条
  */

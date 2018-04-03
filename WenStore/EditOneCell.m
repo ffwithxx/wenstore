@@ -635,14 +635,18 @@
     }
     
     
+    NSDecimalNumber *sys001 = oneModel.sys001;
+    NSDecimalNumber *com = [NSDecimalNumber decimalNumberWithString:@"0"];
+    NSComparisonResult  sysCompar = [sys001 compare:com];
     NSDecimalNumber *num = self.numCount;
-     if (![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"有货"]&&![BGControl isNULLOfString:oneModel.sys001Text]) {
-        num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
+    if (sysCompar == NSOrderedDescending) {
+        
+        num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001]];
         
     }
     NSComparisonResult res = [self.numCount compare:num];
     if (res == NSOrderedDescending) {
-        self.numCount = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
+        self.numCount = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001]];
         desStr = [NSString stringWithFormat:@"%@%@%@%@",oneModel.k1dt002,@"可定量最多为",[BGControl notRounding:num afterPoint:lpdt036],oneModel.k1dt005];
         
         

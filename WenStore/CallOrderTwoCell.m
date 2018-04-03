@@ -177,21 +177,22 @@
         }
     }
     
-    if (![BGControl isNULLOfString:self.stockLab.text ]) {
-        NSDecimalNumber *num = self.numCount;
-        if (![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"0"]&& ![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"无货"]&&![[NSString stringWithFormat:@"%@",oneModel.sys001Text] isEqualToString:@"有货"]) {
-            num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
-            
-        }
-        NSComparisonResult res = [self.numCount compare:num];
-        if (res == NSOrderedDescending) {
-            self.numCount = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001Text]];
-            desStr = [NSString stringWithFormat:@"%@%@%@%@",oneModel.k1dt002,@"可定量最多为",[BGControl notRounding:num afterPoint:lpdt036],oneModel.k1dt005];
-            
-            
-        }
+    NSDecimalNumber *sys001 = oneModel.sys001;
+    NSDecimalNumber *com = [NSDecimalNumber decimalNumberWithString:@"0"];
+    NSComparisonResult  sysCompar = [sys001 compare:com];
+    NSDecimalNumber *num = self.numCount;
+    if (sysCompar == NSOrderedDescending) {
+        
+            num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001]];
+        
     }
-    
+    NSComparisonResult res = [self.numCount compare:num];
+    if (res == NSOrderedDescending) {
+        self.numCount = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",oneModel.sys001]];
+        desStr = [NSString stringWithFormat:@"%@%@%@%@",oneModel.k1dt002,@"可定量最多为",[BGControl notRounding:num afterPoint:lpdt036],oneModel.k1dt005];
+        
+        
+    }
     
     NSArray *arr = [rightDic valueForKey:@"pricConfigs"];
     NSDecimalNumber *price;
@@ -424,11 +425,7 @@
          self.stockLab.hidden = NO;
     }
     
-    if (!isPrice) {
-        self.priceLab.hidden = YES;
-    }else{
-        self.priceLab.hidden = NO;
-    }
+    
     if (!isSYS001) {
         self.stockLab.hidden = YES;
     }else{
@@ -446,11 +443,11 @@
         self.plusBth.enabled = YES;
         self.remindButton.hidden = YES;
     }
-    if (![BGControl isNULLOfString:model.sys001Text]) {
+//    if (![BGControl isNULLOfString:model.sys001Text]) {
          self.stockLab.text =  [NSString stringWithFormat:@"%@ %@",@"可订量:",model.sys001Text];
-    }else{
-     self.stockLab.text = @"";
-    }
+//    }else{
+//     self.stockLab.text = @"";
+//    }
    
     
     //    self.oneImg.image = [UIImage imageNamed:@"zeng.png"];
@@ -475,13 +472,13 @@
     
     NSString *priceStr = [BGControl notRounding:model.originaltest afterPoint:lpdt042];
     NSString *str = [NSString stringWithFormat:@"%@",model.originaltest];
-    if (![str isEqualToString:@"0"]) {
+    if (![str isEqualToString:@"0"] && isPrice) {
          self.priceLab.text = [NSString stringWithFormat:@"%@%@%@%@",@"￥",priceStr,@"/",model.k1dt005];
     }else{
-        self.priceLab.text = @"";
+         self.priceLab.text = [NSString stringWithFormat:@"%@",model.k1dt005];
     }
    
-    
+
     NSInteger sum = 0;
     CGFloat sumHei = 0;
     NSArray *arr = [rightDict valueForKey:@"pricConfigs"];

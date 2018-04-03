@@ -18,4 +18,8 @@
 @property (nonatomic,strong) NSString *idStr;
 @property (strong, nonatomic) IBOutlet UIButton *searchBth;
 @property (nonatomic,strong) NSDictionary *dataDict;
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
 @end

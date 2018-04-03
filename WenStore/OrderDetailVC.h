@@ -60,4 +60,8 @@
 @property (strong, nonatomic) NSArray *phoneArr;
 @property (strong, nonatomic) NSArray *nameArr;
 @property (strong, nonatomic) IBOutlet UIView *AddressView;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
 @end

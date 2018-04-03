@@ -29,6 +29,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *searchTitleLab;
 @property (strong, nonatomic) IBOutlet UILabel *searchLab;
 @property (strong, nonatomic) IBOutlet UIImageView *searchImg;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *rightBth;
 
 @property (strong, nonatomic) NSString  *K1mf100;
 @end

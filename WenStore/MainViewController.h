@@ -24,5 +24,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *CountLab;
 @property (strong, nonatomic) IBOutlet UIScrollView *infoScrollview;
 @property (strong, nonatomic) IBOutlet UIButton *detailBth;
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UIImageView *rightImg;
 
 @end

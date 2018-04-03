@@ -45,6 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     dict = [[NSMutableDictionary alloc] init];
     detpsArr = [NSArray array];
     self.bigtableView.showsVerticalScrollIndicator = NO;
@@ -54,7 +55,23 @@
     [self firstOne];
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+   
+    
+    
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.titleLab.frame = CGRectMake(0, 34, kScreenSize.width, 50);
+        self.leftImg.frame = CGRectMake(15, 51, 22, 19);
+   
+        self.bigtableView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+        
+    }
+}
 -(void)firstOne {
     NSArray *arr = [self.dataDict valueForKey:@"group"];
     for (int i = 0; i<arr.count; i++) {

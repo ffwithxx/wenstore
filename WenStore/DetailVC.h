@@ -26,4 +26,10 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *bigScrollView;
 @property (strong, nonatomic) IBOutlet UIButton *HeadImg;
 @property (strong, nonatomic) NSArray *reasonsArr;
+
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
+
 @end

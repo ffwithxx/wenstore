@@ -23,8 +23,24 @@ NSDictionary *loginDict;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self isIphoneX];
     [self first];
     // Do any additional setup after loading the view.
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.title = @"账户详情";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.hidden = NO;
+    
+    
+}
+- (void)isIphoneX {
+    if (kiPhoneX) {
+        self.navView.frame = CGRectMake(0, 0, kScreenSize.width, kNavHeight);
+        self.bigView.frame = CGRectMake(0, kNavHeight, kScreenSize.width, kScreenSize.height-kNavHeight);
+    }
 }
 -(void)first {
    
@@ -33,14 +49,7 @@ NSDictionary *loginDict;
     NSDictionary *usesrDict = [loginDict valueForKey:@"user"];
       self.mobileLab.text = [usesrDict valueForKey:@"userId"];
 }
-// 即将进来页面后关闭抽屉
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-//           [ShareApp.drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-//               [ShareApp.drawerController  setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
-//           }];
-}
+
 
 // 即将出去后再打开 因为可能其他页面需要抽屉效果
 - (void)viewWillDisappear:(BOOL)animated

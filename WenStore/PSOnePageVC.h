@@ -13,5 +13,10 @@
 @property (strong, nonatomic) IBOutlet UIView *lineView;
 @property (strong, nonatomic) IBOutlet UIButton *twoBth;
 @property (strong, nonatomic) IBOutlet UITableView *bigTableView;
-
+@property (strong, nonatomic) IBOutlet UIView *navView;
+@property (strong, nonatomic) IBOutlet UIImageView *rightImg;
+@property (strong, nonatomic) IBOutlet UIImageView *leftImg;
+@property (strong, nonatomic) IBOutlet UILabel *titLab;
+@property (strong, nonatomic) IBOutlet UIView *oneView;
+@property (strong, nonatomic) IBOutlet UIView *bigView;
 @end
